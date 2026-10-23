@@ -1,0 +1,25 @@
+Banner consistency audit — 22 October 2026
+
+Observed drift: interior main offsets were fixed independently of the responsive
+navbar; Contact Us had separate offsets and section-scale H1 styling; articles
+used unrelated fixed image heights and logo-only frames had another height.
+
+Resolution: src/styles/banners.css supplies shared entry/exit spacing, heading
+weight/colour/tracking, lead widths, content gaps and image corner treatment.
+It loads after page styles, including contact.css. Header clearance derives from
+the actual shared navbar-height token, with desktop/tablet/mobile spacing modes.
+The homepage retains its expressive headline and split composition. Editorial
+articles retain a documented smaller title scale for their complete long titles.
+Article images share a 4:3 frame; logo artwork uses contain rather than cover.
+Corporate panoramic images share responsive heights and 8px corner treatment.
+Contact retains its enlarged form, 4:3 image and functional side-by-side layout.
+No source content, markup, imagery, links, handlers or motion was changed.
+
+Validation: build and static verification passed on all 37 routes, including
+official content coverage, semantic structure and email-draft behavior.
+Browser page checks passed all 37 routes at 1440, 768 and 390px: no overflow,
+broken images or duplicate/missing H1s. Banner-specific browser assertions pass
+nine representative routes at 1440, 768, 390 and 320px: identical opening entry,
+at least 32px navbar clearance, shared title styling and contained imagery.
+Desktop corporate/contact and mobile article screenshots reviewed.
+Reports: .qa/banner-results.json and .qa/pages-results.json.

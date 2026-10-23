@@ -1,0 +1,36 @@
+What We Do — four-point native scroll viewport, 22 October 2026
+
+Desktop image and existing ordered list share a measured height ending at the
+bottom of the complete fourth source point. Points5–6 remain in the same DOM
+and are reached through native vertical scrolling, with a brand-colour scrollbar.
+No carousel, added navigation buttons, wrappers, sticky positioning, scroll
+hijacking, snapping, autoplay, image zoom or parallax introduced.
+
+src/scripts/work-viewport.js measures the actual first-four-row boundary,
+including current line wrapping and scrollbar gutter. It rounds the resulting
+height upward to an even pixel value, and recalculates after fonts load and
+when row widths or viewport size change. The image remains object-fit:cover.
+Zero-minimum grid/cell widths prevent intrinsic content overflow.
+
+The list receives tabindex0 and aria-labelledby referencing the existing
+section heading on desktop. Native keyboard scrolling works; no custom key
+handlers or extra focus stops are added. Existing motion/progress scheduling
+now also listens passively to list scrolling. Fully reaching the list end
+correctly selects the final stage in the existing progress indicator.
+
+At <=1000px the clipping, set height and focus attributes are removed; all six
+points appear in normal document flow below the image. Without JavaScript the
+same original source list remains wholly visible, with no clipping applied.
+Reduced-motion/transparency behavior remains supported.
+
+No DOM element, source text, source list order, branding or imagery changed.
+The small sizing initializer is concatenated into the existing motion.js output,
+so no stylesheet/script elements or network requests were added.
+
+Validation: build/source-content/semantic/even-pixel checks pass. Focused tests
+at1920/1440/1280/1024/1001/1000/768/390/320px verify four complete initial
+points, fifth point below the viewport, equal image/list height, all six source
+items retained, no page overflow, desktop keyboard End revealing point6 and
+updating06/06, and unclipped mobile/tablet behavior. Desktop screenshot reviewed.
+Reports: .qa/work-viewport-results.json and .qa/storytelling-results.json.
+Backup: .undo/work-four-visible/.

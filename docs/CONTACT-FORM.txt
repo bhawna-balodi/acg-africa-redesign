@@ -1,0 +1,88 @@
+Contact section height refinement - 21 October 2026
+- Increased the Contact Us desktop section height by 20% (under one pixel of
+  rounding versus the measured previous section). Regular/short desktop density
+  modes retained, with larger field heights, padding, message area and gaps.
+- Adjacent image is 20% taller, remains top-aligned in the existing column, and
+  uses object-fit:cover to preserve the underlying photograph's proportions.
+- This CSS-only change is scoped to Contact Us at desktop widths. Tablet/mobile
+  section and image measurements are identical before/after; other forms retain
+  their current layout. Full body DOM fingerprint is identical before/after.
+- Verified at 1440/1366/1280/1024/768/390/320px: no horizontal overflow. Regular
+  desktop section is 806.39px (was 671.39); short desktop is 734.39px (was 611.39).
+- All content/DOM/ARIA/source/link/email tests pass. Three form pages pass layout,
+  validation, copy fallback and no-JavaScript checks at five widths. Desktop
+  screenshot reviewed. New height intentionally supersedes the earlier tight
+  single-viewport sizing contract. No clipping or nested scroll area introduced.
+- Evidence: .qa/contact-height-before.json and .qa/contact-height-after.json.
+  Previous stylesheet: .undo/contact-height-20/contact.css.
+
+Contact sizing and navbar refinement - 21 October 2026
+- Increased the current navbar height by 15% using its existing responsive
+  calculation; retained full logo, 16px navigation and touch-target sizing.
+- Desktop form padding, gaps and field heights now respond to viewport height.
+  Body/labels remain at least 16px and controls at least 44px. An empty live
+  status region no longer reserves unused vertical space; errors, manual
+  textarea resizing and submission feedback can still expand naturally.
+- Contact page starts below the actual navbar with a deliberate 16/24px gap.
+  Removed the legacy forced section padding rather than clipping the form,
+  limiting its height, scaling it down or adding an internal scroller.
+- Slightly widened the desktop image column and applied an 8:5 image frame,
+  preserving object-fit and alignment. Mobile/tablet composition retained.
+- Entire initial form is visible at 1920x1080, 1440x900, 1366x768, 1280x720,
+  1024x768 and 1001x768. At 1366x768 its bottom is 692.53px; at 1440x900
+  its bottom is 760.53px. No fields, labels, country choices or notes removed.
+- Nine viewport checks pass navbar sizing, alignment, overflow, aspect ratio
+  and touch targets. Desktop laptop screenshot visually reviewed. Three form
+  pages pass layout/validation/copy/fallback checks at five widths. Homepage
+  menu, keyboard, sequence, reduced-motion and no-JS regression pass.
+- Content, routes, assets, CTA ownership and email-draft checks pass.
+- Results: .qa/contact-sizing-results.json and .qa/contact-results.json.
+  Before-change styles: .undo/contact-sizing/.
+
+Themed contact form - 21 October 2026
+
+User-selected delivery
+- Prepare an email to info@acgafrica.com. This supersedes the previous choice
+  to redirect to the official form. No backend, CAPTCHA simulation or fake
+  delivery confirmation is used. Submit opens the user email editor; sending
+  the draft is a separate user action. Input values are never reset.
+
+Source and placement
+- Original Get in Touch heading, description, email, six required field labels,
+  all country-code options, South Africa default, required legend and Submit
+  label are extracted from sources/contact-us.html. No new business fields.
+- One reusable component appears on Contact Us and the existing closing contact
+  sections on Who We Are and Our Team. Homepage/nav CTAs lead to local contact.
+- Shared type, spacing, colors, borders and CTA styles; desktop editorial split
+  and a stacked mobile form. Existing images remain in stable inline frames.
+
+Behavior and accessibility
+- Native required/email validation and text whitespace validation; visible labels,
+  autocomplete, phone input mode, inline errors and an announced status region.
+- Copy enquiry prepares the same content. If clipboard access fails, a focused
+  selectable text area provides a manual fallback. This does not send anything.
+- No-JavaScript mode retains the native mailto form and validation; JS-only Copy
+  control remains hidden. No entered details are saved in browser storage.
+
+Implementation
+- src/templates/contact-form.mjs: shared themed form rendering.
+- src/content/contact-form.json: extracted official schema.
+- scripts/import-pages.mjs: reproducible extraction and three placements.
+- src/styles/contact.css: scoped responsive contact layout.
+- src/scripts/contact.js: validation, draft encoding, clipboard/manual fallback.
+
+Verification
+- All source wording, routes, assets and CTA ownership pass sitewide verification.
+- Exact labels/options/default/required states, safe draft encoding and actual
+  Submit handler tested with an isolated email editor: correct recipient, all
+  details retained, incomplete enquiries blocked. No actual email was sent.
+- Three pages pass layout/controls at 1440/1024/768/390/320px (15 checks).
+- Browser tests pass empty/invalid email validation, successful copy, rejected
+  clipboard fallback, keyboard focus and no-JavaScript behavior. No JS errors.
+- Three changed pages pass scroll/image checks at four widths (12 checks): no
+  root overflow, sticky content, frame overflow, broken images or image drift.
+- Desktop/mobile contact screenshots visually reviewed. The OS email-client
+  setup and actual email delivery are outside this local preview verification.
+- Aftermark reviewed for truthful interactions, accessible controls, consistent
+  typography, deliberate grouping, stable imagery and restrained motion.
+- Before-change snapshot: .undo/contact-form/.

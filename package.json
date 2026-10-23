@@ -1,0 +1,16 @@
+{
+  "name": "acg-africa-redesign",
+  "private": true,
+  "type": "module",
+  "devDependencies": {
+    "cheerio": "1.1.2"
+  },
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "content:import": "node scripts/import-content.mjs && node scripts/import-pages.mjs",
+    "build": "node scripts/build.mjs",
+    "verify": "node scripts/verify.mjs",
+    "reports": "node scripts/verify.mjs --write-reports",
+    "check": "node scripts/check-syntax.mjs"
+  }
+}

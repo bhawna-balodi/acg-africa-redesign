@@ -1,0 +1,123 @@
+/* Contextual outline icons share one 24-unit, two-stroke vocabulary. Existing
+   wording, semantic elements and focus order remain the accessible interface. */
+:root{--icon-box-surface:color-mix(in srgb,var(--green) 10%,var(--white));--icon-box-hover:color-mix(in srgb,var(--green) 18%,var(--white));--icon-box-radius:var(--media-radius)}
+.accountability-rail li:nth-child(1),.gate-process .gates__track li:nth-child(1){--context-icon:var(--icon-concept)}
+.accountability-rail li:nth-child(2),.gate-process .gates__track li:nth-child(2){--context-icon:var(--icon-feasibility)}
+.accountability-rail li:nth-child(3),.gate-process .gates__track li:nth-child(3){--context-icon:var(--icon-bankability)}
+.accountability-rail li:nth-child(4),.gate-process .gates__track li:nth-child(4){--context-icon:var(--icon-delivery)}
+.accountability-rail li:nth-child(5),.gate-process .gates__track li:nth-child(5){--context-icon:var(--icon-operations)}
+.acgx-list>li:nth-child(1){--context-icon:var(--icon-people)}
+.acgx-list>li:nth-child(2){--context-icon:var(--icon-route)}
+.acgx-list>li:nth-child(3){--context-icon:var(--icon-bankability)}
+.acgx-list>li:nth-child(4){--context-icon:var(--icon-link)}
+.mission-grid article:nth-child(1){--context-icon:var(--icon-growth)}
+.mission-grid article:nth-child(2){--context-icon:var(--icon-operations)}
+.mission-grid article:nth-child(3){--context-icon:var(--icon-delivery)}
+.mission-grid article:nth-child(4){--context-icon:var(--icon-link)}
+.model-verticals article:nth-child(1){--context-icon:var(--icon-delivery)}
+.model-verticals article:nth-child(2){--context-icon:var(--icon-calendar)}
+.model-verticals article:nth-child(3){--context-icon:var(--icon-operations)}
+.comparison-section .accountability-rail li:before,
+.comparison-section .acgx-list>li:before,
+.gate-process .gates__step:before,
+.mission-grid article h3:before,
+.model-verticals article h3:before{
+ content:'';display:block;width:40px;height:40px;flex-shrink:0;
+ border-radius:var(--icon-box-radius);
+ background:var(--icon-box-surface) var(--context-icon) center / 24px 24px no-repeat;
+}
+.mission-grid article h3:before,.model-verticals article h3:before{margin-bottom:16px}
+.gate-process .gates__step:before{margin-bottom:16px}
+.contact-introduction a[href^="mailto:"]:before,
+.profile-reference:after{
+ content:'';display:inline-block;width:24px;height:24px;
+ border-radius:var(--icon-box-radius);
+ background:var(--icon-box-surface) var(--icon-mail) center / 16px 16px no-repeat;
+ margin-right:8px;vertical-align:-6px;
+}
+.profile-reference:after{background-image:var(--icon-forward);margin:0 0 0 8px}
+.profile-reference[href^="http"]:after{background-image:var(--icon-external)}
+.arrow path{stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+/* Icon-only sequence controls use a centered vector, not font-baseline glyphs.
+   Existing button text and accessible labels remain in the original DOM. */
+.sequence-controls button{display:inline-flex;align-items:center;justify-content:center;padding:0;font-size:0;line-height:1}
+.sequence-controls button:before{
+ content:'';display:block;flex-shrink:0;width:24px;height:24px;
+ background:currentColor;
+ -webkit-mask:var(--icon-forward) center / contain no-repeat;
+ mask:var(--icon-forward) center / contain no-repeat;
+}
+.sequence-controls .sequence-prev:before{transform:rotate(180deg)}
+
+/* The platform's original source nodes become an introduction, a connected
+   five-gate diagram, an editorial responsibility list and a separate contrast. */
+.comparison-section .acgx-stage{grid-template-columns:minmax(0,1fr);gap:48px}
+.comparison-section .acgx-inner{max-width:none;min-width:0}
+.comparison-section .acgx-card--is .acgx-inner{
+ display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px 32px;
+}
+.comparison-section .acgx-card--is .acgx-title{grid-column:1 / 6;align-self:start}
+.comparison-section .acgx-card--is .acgx-lead{grid-column:6 / -1;margin:0;max-width:720px}
+.comparison-section .acgx-card--is .accountability-rail{
+ grid-column:1 / -1;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));
+ gap:24px;position:relative;padding:32px 0 0!important;margin:16px 0 0;
+ max-width:none;
+}
+.comparison-section .accountability-rail:before{
+ content:'';position:absolute;top:88px;left:10%;right:10%;height:2px;background:var(--green);opacity:.3;
+}
+.comparison-section .accountability-rail li{
+ position:relative;display:flex;flex-direction:column;align-items:center;
+ gap:32px;min-width:0;margin:0;padding:0;border:0;text-align:center;
+}
+.comparison-section .accountability-rail li:before{width:40px;height:40px}
+.comparison-section .accountability-rail li:after{
+ content:'';position:absolute;top:52px;left:calc(50% - 4px);
+ width:8px;height:8px;border-radius:50%;background:var(--green);
+}
+.comparison-section .acgx-card--is :is(.acgx-note,.acgx-sub,.acgx-list,.acgx-cta){grid-column:1 / -1;max-width:none}
+.comparison-section .acgx-card--is .acgx-note{margin:0;padding:24px 0;border-bottom:2px solid var(--line);text-align:center}
+.comparison-section .acgx-card--is .acgx-sub{margin:8px 0 0;font-weight:600}
+.comparison-section .acgx-card--is .acgx-list{
+ display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 48px;
+ list-style:none;padding:0;margin:0;
+}
+.comparison-section .acgx-list>li{
+ display:grid;grid-template-columns:40px minmax(0,1fr);gap:16px;
+ margin:0;padding:24px 0 0;border-top:2px solid var(--line);
+}
+.comparison-section .acgx-list>li:first-child{grid-column:1;grid-row:1 / 4}
+.comparison-section .acgx-list>li:nth-child(n+2){grid-column:2}
+.comparison-section .acgx-list>li:before{color:var(--green);margin-top:4px}
+.comparison-section .acgx-card--is .acgx-cta{margin:0;padding-top:24px}
+.comparison-section .acgx-card+.acgx-card{
+ padding:40px;border:0;border-radius:var(--scene-radius);background:var(--paper);
+}
+.comparison-section .acgx-card--not .acgx-inner{display:grid;grid-template-columns:8fr 4fr;gap:48px;align-items:end}
+.comparison-section .acgx-card--not .acgx-copy{max-width:800px}
+.comparison-section .acgx-card--not .acgx-cta{margin:0;border:0;justify-content:flex-end}
+@media(hover:hover) and (pointer:fine){
+ .comparison-section .accountability-rail li:before{transition:background-color var(--feedback) var(--ease)}
+ .comparison-section .accountability-rail li:hover:before{background-color:var(--icon-box-hover)}
+}
+@media(max-width:1000px){
+ .comparison-section .acgx-card--is .acgx-title,
+ .comparison-section .acgx-card--is .acgx-lead{grid-column:1 / -1}
+ .comparison-section .acgx-card--not .acgx-inner{grid-template-columns:1fr;gap:24px}
+ .comparison-section .acgx-card--not .acgx-cta{justify-content:flex-start}
+}
+@media(max-width:700px){
+ .comparison-section .acgx-card--is .acgx-inner{grid-template-columns:minmax(0,1fr);gap:24px}
+ .comparison-section .acgx-card--is .accountability-rail{grid-template-columns:1fr;gap:24px;padding:0!important;margin:0}
+ .comparison-section .accountability-rail:before{left:20px;right:auto;top:20px;bottom:20px;width:2px;height:auto}
+ .comparison-section .accountability-rail li{flex-direction:row;gap:24px;text-align:left;background:var(--tint)}
+ .comparison-section .accountability-rail li:after{display:none}
+ .comparison-section .acgx-card--is .acgx-note{text-align:left}
+ .comparison-section .acgx-card--is .acgx-list{grid-template-columns:1fr;gap:24px}
+ .comparison-section .acgx-list>li:first-child,
+ .comparison-section .acgx-list>li:nth-child(n+2){grid-column:1;grid-row:auto}
+ .comparison-section .acgx-card+.acgx-card{padding:24px}
+ .comparison-section .acgx-card--is .acgx-cta{gap:16px}
+}
+@media(prefers-reduced-motion:reduce){.comparison-section .accountability-rail li:before{transition:none}}

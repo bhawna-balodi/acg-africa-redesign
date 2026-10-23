@@ -1,0 +1,67 @@
+Sitewide quality audit — 22 October 2026
+
+Scope: all 37 local routes, shared templates and styling layers. Preserve the
+established design, source content, DOM relationships and interaction logic.
+
+Checklist reviewed in full:
+C:/Users/WS65-DEV-TEAM/.codex/attachments/53497ecb-3f26-45bb-a8a7-a3a8b4e3ac87/Pasted text.txt
+Vibe Coded Websites Report – Aftermark AI.
+
+Findings and corrections
+1. DOM: existing shared semantic normalization already supplies landmarks,
+   logical headings, named navigation and controls, unique IDs, figures and
+   articles. No additional wrapper removal was justified. All body markup is
+   identical to the pre-audit snapshot; no content, template or script changed.
+2. Typography: computed Manrope size, weight, leading and tracking audited on
+   every page at 1440, 768, 390 and 320px. Before/after reports are identical.
+   Retain the shared role-based tokens, strong homepage hierarchy and explicitly
+   requested 18px body text; no new type scale or font was introduced.
+3. Palette: primary navy #0b273e, green #1e4844, rust #803628, gold #c3803a and
+   light surface #fafbf6 are present in official source snapshots. Replaced
+   isolated green/gold/neutral hexadecimal tints with centralized mixtures of
+   those brand colors and white. Glass surfaces derive from the same paper
+   token. Original photographs, icons and wordmark assets remain unchanged.
+   Source: https://acgafrica.com/ and retained sources/*.html.
+   Official wordmark compared against the current downloaded asset:
+   https://acgafrica.com/wp-content/uploads/2026/08/Group-148335.png
+   Both 561x271; zero different decoded pixels (PNG compression differs).
+4. Navbar: shared responsive baseline retained; shell height and logo height
+   both multiplied by 1.1. Regular desktop shell ~89.15px becomes ~98.07px.
+   Banner offsets inherit the shared height token. No scroll-state height change.
+5. Radius: media/diagram/icon boxes share 8px; controls/forms/buttons/submenus
+   share 16px; navigation shell retains 24px. Scene and icon tokens now alias
+   media radius; submenu no longer inherits the larger shell radius. Square
+   text actions, full-bleed backgrounds and circular indicator dots are
+   purpose-specific exceptions. Existing image composition remains intact.
+
+Aftermark review
+No added gradients, decorative icons, fabricated content, testimonials, card
+lifting, animation packages or loading simulations. Existing selective glass
+uses high-opacity surfaces and solid fallbacks. Reduced-motion behavior,
+keyboard focus, manual challenge controls and native process scrolling remain.
+Metadata, favicon, local links and original imagery verified by existing checks.
+Local preview noindex/deployment settings deliberately remain unchanged.
+
+Validation
+- Build and static verification: 37 routes, exact original content fragments,
+  108 original image assets, 1561 link/asset references; passed.
+- DOM audit: heading order, landmarks, IDs, ARIA references, named controls,
+  no nested links/buttons; passed on all routes.
+- Typography: all 37 routes x four widths; exact computed before/after match.
+- Page rendering: all 37 routes at 1440, 768 and 390px; no horizontal overflow,
+  missing images or browser exceptions.
+- Navbar/logo fit: six widths from 320 through 1440px; passed.
+- Contact section sizing: nine viewport combinations through 1920px; passed.
+- Browser accessibility/skip-link keyboard checks: desktop and mobile; passed.
+- Three shared contact forms: five widths, required validation and draft-email
+  behavior; passed. Existing 1px field strokes preserved.
+- Four challenge states, keyboard/mobile navigation, reduced motion/no-JS,
+  process active-row fill and light separators: passed.
+
+QA evidence: .qa/typography-before.json, typography-after.json,
+dom-audit-after.json, pages-results.json, brand-refinement-results.json,
+dom-accessibility-results.json and contact-sizing-results.json.
+Undo snapshot: .undo/sitewide-quality-audit/.
+
+Validation is local browser/static QA; this work does not publish the site or
+claim external email delivery/backend testing.

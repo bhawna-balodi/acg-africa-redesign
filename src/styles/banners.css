@@ -1,0 +1,49 @@
+/* Shared opening system. Composition follows content; edges, type and rhythm
+   remain consistent. Loaded last so individual page styles cannot drift. */
+:root{
+ --banner-header-inset:24px;
+ --banner-entry-gap:48px;
+ --banner-exit-gap:64px;
+ --banner-content-gap:32px;
+ --banner-title:clamp(44px,6.2vw,88px);
+ --banner-story-title:clamp(32px,3.7vw,52px);
+}
+body.storytelling-site[data-page] main{padding-top:calc(var(--navbar-height) + var(--banner-header-inset) + var(--banner-entry-gap))}
+body.storytelling-site main>.page-intro,
+body.storytelling-site main>.source-hero{padding-top:0;padding-bottom:var(--banner-exit-gap)}
+.storytelling-site .page-intro h1{
+ font-size:var(--banner-title);font-weight:700;line-height:1.08;
+ letter-spacing:-.035em;color:var(--green);max-width:1160px;margin:0;
+}
+.storytelling-site .page-intro>.wrap>.page-lead{
+ margin-top:var(--banner-content-gap);max-width:880px;
+ font-size:var(--type-lead);line-height:1.5;
+}
+.storytelling-site .page-intro .page-cover{
+ margin-top:48px;height:clamp(280px,32vw,440px);border-radius:var(--scene-radius);
+}
+.storytelling-site .page-intro .page-cover img,
+.storytelling-site .source-hero .hero-image img{object-fit:cover}
+.storytelling-site .page-intro .page-actions,
+.storytelling-site .page-intro .section-index{margin-top:var(--banner-content-gap)}
+.storytelling-site .story-opening>.wrap{gap:var(--banner-content-gap) var(--s6);align-items:center}
+.storytelling-site .story-opening h1{font-size:var(--banner-story-title);line-height:1.13}
+.storytelling-site .story-opening .story-cover{
+ height:auto;aspect-ratio:4 / 3;border-radius:var(--scene-radius);
+}
+/* Logo artwork uses the same frame without cropping the identity. */
+.storytelling-site .story-opening .brand-cover img{object-fit:contain}
+.storytelling-site.profile-page .page-intro>.wrap{gap:var(--s3)}
+.storytelling-site .contact-destination .contact-introduction h1+p{margin-top:var(--s3)}
+.storytelling-site .contact-destination .contact-editorial-picture{margin-top:var(--banner-content-gap)}
+@media(max-width:1000px){
+ :root{--banner-entry-gap:40px;--banner-exit-gap:48px;--banner-content-gap:24px}
+ .storytelling-site .story-opening>.wrap{gap:var(--banner-content-gap)}
+}
+@media(max-width:700px){
+ :root{--banner-header-inset:16px;--banner-entry-gap:32px;--banner-exit-gap:48px}
+ .storytelling-site .page-intro .page-cover{margin-top:32px;height:260px}
+ .storytelling-site .story-opening .story-cover{height:auto;aspect-ratio:4 / 3}
+}
+/* An expanded, static no-JS menu occupies normal flow. */
+@media(max-width:1000px){html:not(.js) body.storytelling-site main{padding-top:var(--banner-entry-gap)}}

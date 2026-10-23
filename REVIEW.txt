@@ -1,0 +1,36 @@
+﻿ACG home-page redesign — current scope
+
+Only the home page is generated. Secondary page routes have been removed.
+Navigation and contact links point to the corresponding original ACG pages.
+
+The four original sections remain in order:
+1. African Collaborations Group (ACG) / introduction
+2. Why this matters
+3. The challenge we are solving, including The familiar failure
+4. Our mission
+
+All substantive home-page text is imported from sources/home.html without
+rewriting. Identical responsive copies are displayed once. The original mission
+icons, brand logo and home-page hero artwork are used. Footer copy is preserved.
+No content from the other pages has been inserted into the home page.
+
+Structure:
+  sources/home.html          Original home-page reference snapshot
+  src/content/               Imported content, provenance and image mappings
+  src/templates/layout.mjs   Shared HTML document and site shell
+  src/styles/site.css        Design tokens and responsive styling
+  src/scripts/site.js        Accessible navigation enhancement
+  public/assets/             Original downloaded source images
+  scripts/import-content.mjs Home-page content import
+  scripts/build.mjs          Home-page-only output generation
+  scripts/verify.mjs         Content, structure, links and interaction checks
+  dist/                     Generated home page and required assets only
+
+Other downloaded source snapshots remain reference material, not site pages.
+Run node scripts/import-content.mjs, node scripts/build.mjs and
+node scripts/verify.mjs from the project directory.
+
+Verification passed: one HTML page, four original sections in order,
+25 exact source fragments, eight original image assets, local references and
+menu open/close logic. Browser rendering is unverified because no browser is
+available in this session. Production acgafrica.com has not been changed.

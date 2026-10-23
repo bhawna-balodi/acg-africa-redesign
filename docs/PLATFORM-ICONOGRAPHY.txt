@@ -1,0 +1,46 @@
+Platform explanation and outline iconography — 22 October 2026
+
+What ACG is
+Original H2 and lead introduce a full-width connected five-gate sequence.
+Concept, Feasibility, Bankability, Delivery and Operations retain their exact
+wording/order and each now has a meaningful outline symbol. The existing
+accountability statement is anchored immediately beneath the complete diagram.
+Four original responsibilities are grouped as an open editorial list with
+consistent symbol/text alignment. Dense stakeholder detail stays with its
+primary statement. Section-owned CTAs remain after all responsibilities.
+The existing What ACG is not article is a separate closing contrast band.
+Mobile uses a vertical gate sequence and a natural single-column reading flow.
+
+Sitewide icon vocabulary
+src/templates/icons.mjs builds local CSS masks with one 24-unit canvas,
+two-unit stroke and rounded joins/caps. No packages, remote icon requests,
+images or new DOM nodes. Decorative pseudo-elements leave text names, headings,
+source semantics and keyboard focus unchanged. Existing branding/share logos
+are retained; interface arrow SVGs receive matching two-unit strokes.
+
+Icons are selectively used on matching five-gate labels in What We Do, platform
+responsibilities, homepage mission principles, Victory District's three model
+functions, contact email links and biography source references. Internal source
+references use forward arrows; only actual HTTP links use the external symbol.
+No icons are added to ordinary prose, long biographies or news article text.
+No extra interactive controls, hidden content or pointer affordances introduced.
+
+Implementation
+src/styles/interface.css uses existing content classes. Build concatenates its
+CSS and icon tokens into the existing storytelling.css request. Typography's
+existing final role layer remains authoritative. Body 18px, heading scale,
+brand colours, original copy, imagery, CTA ownership and runtime JS unchanged.
+All authored visual pixel sizes remain even, checked by the source audit.
+
+Verification
+37-route exact-body DOM/typography audit passed at 1440/768/390/320px.
+Source-content, semantic, original-assets and email-draft static checks passed.
+Who We Are / What We Do / Victory District full-page browser checks passed at
+1440/768/390px. Focused platform checks at 1440/1024/768/390/320px verify all
+five visible labels/icons, progression direction, four responsibilities, no
+overflow and identical semantic stage icons across the two relevant pages.
+Desktop and mobile platform screenshots reviewed.
+Reports: .qa/platform-results.json, .qa/typography-after.json.
+Backup of preceding build: .undo/platform-icons/build.mjs.
+
+Icon-box refinement: feature icons now sit in40px softly rounded8px boxes with subtle brand-green #e3ece5 surfaces,24px main-green #1e4844 outline glyphs. Inline contact/source icons use a compact24px box with16px glyph. Same local SVG vocabulary is rendered as CSS backgrounds instead of masks so the box and icon have independent colours without adding DOM. Diagram connectors and list icon columns adjusted to match; hover darkens only the box surface, reduced-motion support retained. Content, DOM, typography and handlers unchanged. Focused five-viewport stage/icon tests and static checks pass; desktop screenshot reviewed.

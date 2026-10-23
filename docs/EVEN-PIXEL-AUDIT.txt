@@ -1,0 +1,32 @@
+Authored visual sizing audit — 22 October 2026
+
+Confirmed user scope: even whole-pixel authored visual sizes; preserve responsive
+layouts, ratios, opacity and motion. This is not a requirement to force every
+browser-calculated coordinate or responsive box dimension to an even number.
+
+All six source CSS files audited. Odd visual px lengths normalized to nearest
+even integers (halfway upward): 1px borders/dividers/underlines → 2px, 3px focus
+rings/offsets and progress tracks → 4px, 5px underline offsets → 6px.
+Hidden accessible text uses 2px clipped boxes and -2px margins, retaining its
+screen-reader purpose. The disclosure glyph remains centred with 14px insets.
+The gate connector keeps its centre through even authored calculation operands.
+The navbar wordmark height allowance changed from 14px to 16px to compensate
+for the two added border pixels, preserving the existing navbar height.
+Contact short-desktop baseline 38.25rem → equivalent 612px (16px root size).
+
+Preserved intentionally:
+- 1001px breakpoint boundaries; these are logic thresholds, not visual sizes.
+- Existing 3px transform feedback offsets, as the user requested motion retained.
+- Percentages, fr units, aspect ratios, viewport/rem calculations, intrinsic
+  image dimensions, SVG coordinates, opacity, easing, leading and tracking.
+- Font sizes (including 18px body), wording, DOM, source assets, interactions.
+
+scripts/audit-even-pixels.mjs checks source pixel lengths, with explicit
+breakpoint/motion exceptions. It is included in the normal verification script.
+Backup: .undo/even-pixels/ contains the complete preceding CSS set.
+
+Validation: source sizing audit, build, content/semantic/email/static checks
+passed. Browser sizing checks at nine viewports retained navbar target heights,
+contained logo/navigation, 4:3 desktop contact image, >=44px controls and no
+overflow. Sitewide computed typography/DOM and responsive interaction checks
+are recorded in .qa/typography-after.json and the normal browser QA reports.

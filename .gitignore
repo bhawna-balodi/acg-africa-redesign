@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.qa/
+.undo/
+.openai/
+.env
+.env.*
+!.env.example
+*.zip
+*.log

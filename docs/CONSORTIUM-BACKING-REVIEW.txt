@@ -1,0 +1,32 @@
+Who We Are composition refinement — 22 October 2026
+
+CSS-only updates scoped to the existing consortium-feature and backing-feature.
+No source/template/DOM/content/font/asset/JavaScript changes.
+
+Delivery Consortium
+The existing hub and six source labels now form a connected navy diagram with
+a gold spine and branch marks. Open cells replace floating labels. Three-column
+disciplines on wide screens, two at tablet/mobile, single-column below 380px.
+ACG remains the anchor. Fine-pointer hover changes background/text contrast,
+branch opacity and hub border; there is no card lifting, hidden information,
+autoplay or new click affordance. Reduced motion removes these transitions.
+The old decorative SVG is hidden; the original semantic figure/list stays.
+
+Backing and Reach
+Full-width section label leads to a prominent statement and its paragraph on
+the left, with a separate vertical statistics rail on the right. Tablet places
+the proof below the copy; mobile presents two numbers side by side (stacked
+on the narrowest viewport). Both statistic pairs use number row 1, label row 2
+and consistent left alignment. The original DOM order/text remains untouched.
+
+Validation
+Build and static checks pass, including exact original-source content, DOM
+semantics and authored even-pixel sizing. Browser typography/DOM audit passes
+all 37 routes at 1440/768/390/320px, with exact unchanged body markup.
+Focused test scripts/browser-consortium-qa.mjs checks six viewports:
+1440/1024/1000/768/390/320px; no horizontal overflow, six visible disciplines,
+both numbers above their labels with matching left edges, real hover response
+and reduced-motion transition cancellation. Who We Are full-page checks pass
+1440/768/390px. Desktop diagram/statistics and full mobile page reviewed.
+Reports: .qa/consortium-results.json and .qa/typography-after.json.
+Backup: .undo/consortium-backing/storytelling.css.

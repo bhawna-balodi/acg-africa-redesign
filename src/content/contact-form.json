@@ -1,0 +1,837 @@
+{
+  "requiredLegend": "\"*\" indicates required fields",
+  "submit": "Submit",
+  "defaultCountry": "South Africa: +27",
+  "fields": [
+    {
+      "key": "firstName",
+      "type": "text",
+      "autocomplete": "given-name",
+      "fullWidth": false,
+      "label": "First Name",
+      "required": true
+    },
+    {
+      "key": "lastName",
+      "type": "text",
+      "autocomplete": "family-name",
+      "fullWidth": false,
+      "label": "Last Name",
+      "required": true
+    },
+    {
+      "key": "email",
+      "type": "email",
+      "autocomplete": "email",
+      "fullWidth": true,
+      "label": "Email Address",
+      "required": true
+    },
+    {
+      "key": "message",
+      "type": "textarea",
+      "autocomplete": "",
+      "fullWidth": true,
+      "label": "Your Message",
+      "required": true
+    },
+    {
+      "key": "countryCode",
+      "type": "select",
+      "autocomplete": "tel-country-code",
+      "fullWidth": false,
+      "label": "Country Code",
+      "required": true,
+      "options": [
+        {
+          "value": "South Africa: +27",
+          "text": "South Africa: +27"
+        },
+        {
+          "value": "Afghanistan: +93",
+          "text": "Afghanistan: +93"
+        },
+        {
+          "value": "Albania: +355",
+          "text": "Albania: +355"
+        },
+        {
+          "value": "Algeria: +213",
+          "text": "Algeria: +213"
+        },
+        {
+          "value": "Andorra: +376",
+          "text": "Andorra: +376"
+        },
+        {
+          "value": "Angola: +244",
+          "text": "Angola: +244"
+        },
+        {
+          "value": "Antigua and Barbuda: +1-268",
+          "text": "Antigua and Barbuda: +1-268"
+        },
+        {
+          "value": "Argentina: +54",
+          "text": "Argentina: +54"
+        },
+        {
+          "value": "Armenia: +374",
+          "text": "Armenia: +374"
+        },
+        {
+          "value": "Australia: +61",
+          "text": "Australia: +61"
+        },
+        {
+          "value": "Austria: +43",
+          "text": "Austria: +43"
+        },
+        {
+          "value": "Azerbaijan: +994",
+          "text": "Azerbaijan: +994"
+        },
+        {
+          "value": "Bahamas: +1-242",
+          "text": "Bahamas: +1-242"
+        },
+        {
+          "value": "Bahrain: +973",
+          "text": "Bahrain: +973"
+        },
+        {
+          "value": "Bangladesh: +880",
+          "text": "Bangladesh: +880"
+        },
+        {
+          "value": "Barbados: +1-246",
+          "text": "Barbados: +1-246"
+        },
+        {
+          "value": "Belarus: +375",
+          "text": "Belarus: +375"
+        },
+        {
+          "value": "Belgium: +32",
+          "text": "Belgium: +32"
+        },
+        {
+          "value": "Belize: +501",
+          "text": "Belize: +501"
+        },
+        {
+          "value": "Benin: +229",
+          "text": "Benin: +229"
+        },
+        {
+          "value": "Bhutan: +975",
+          "text": "Bhutan: +975"
+        },
+        {
+          "value": "Bolivia: +591",
+          "text": "Bolivia: +591"
+        },
+        {
+          "value": "Bosnia and Herzegovina: +387",
+          "text": "Bosnia and Herzegovina: +387"
+        },
+        {
+          "value": "Botswana: +267",
+          "text": "Botswana: +267"
+        },
+        {
+          "value": "Brazil: +55",
+          "text": "Brazil: +55"
+        },
+        {
+          "value": "Brunei: +673",
+          "text": "Brunei: +673"
+        },
+        {
+          "value": "Bulgaria: +359",
+          "text": "Bulgaria: +359"
+        },
+        {
+          "value": "Burkina Faso: +226",
+          "text": "Burkina Faso: +226"
+        },
+        {
+          "value": "Burundi: +257",
+          "text": "Burundi: +257"
+        },
+        {
+          "value": "Cambodia: +855",
+          "text": "Cambodia: +855"
+        },
+        {
+          "value": "Cameroon: +237",
+          "text": "Cameroon: +237"
+        },
+        {
+          "value": "Canada: +1",
+          "text": "Canada: +1"
+        },
+        {
+          "value": "Cape Verde: +238",
+          "text": "Cape Verde: +238"
+        },
+        {
+          "value": "Central African Republic: +236",
+          "text": "Central African Republic: +236"
+        },
+        {
+          "value": "Chad: +235",
+          "text": "Chad: +235"
+        },
+        {
+          "value": "Chile: +56",
+          "text": "Chile: +56"
+        },
+        {
+          "value": "China: +86",
+          "text": "China: +86"
+        },
+        {
+          "value": "Colombia: +57",
+          "text": "Colombia: +57"
+        },
+        {
+          "value": "Comoros: +269",
+          "text": "Comoros: +269"
+        },
+        {
+          "value": "Congo (Congo-Brazzaville): +242",
+          "text": "Congo (Congo-Brazzaville): +242"
+        },
+        {
+          "value": "Congo (Democratic Republic): +243",
+          "text": "Congo (Democratic Republic): +243"
+        },
+        {
+          "value": "Costa Rica: +506",
+          "text": "Costa Rica: +506"
+        },
+        {
+          "value": "Croatia: +385",
+          "text": "Croatia: +385"
+        },
+        {
+          "value": "Cuba: +53",
+          "text": "Cuba: +53"
+        },
+        {
+          "value": "Cyprus: +357",
+          "text": "Cyprus: +357"
+        },
+        {
+          "value": "Czech Republic: +420",
+          "text": "Czech Republic: +420"
+        },
+        {
+          "value": "Denmark: +45",
+          "text": "Denmark: +45"
+        },
+        {
+          "value": "Djibouti: +253",
+          "text": "Djibouti: +253"
+        },
+        {
+          "value": "Dominica: +1-767",
+          "text": "Dominica: +1-767"
+        },
+        {
+          "value": "Dominican Republic: +1-809, 1-829, 1-849",
+          "text": "Dominican Republic: +1-809, 1-829, 1-849"
+        },
+        {
+          "value": "Ecuador: +593",
+          "text": "Ecuador: +593"
+        },
+        {
+          "value": "Egypt: +20",
+          "text": "Egypt: +20"
+        },
+        {
+          "value": "El Salvador: +503",
+          "text": "El Salvador: +503"
+        },
+        {
+          "value": "Equatorial Guinea: +240",
+          "text": "Equatorial Guinea: +240"
+        },
+        {
+          "value": "Eritrea: +291",
+          "text": "Eritrea: +291"
+        },
+        {
+          "value": "Estonia: +372",
+          "text": "Estonia: +372"
+        },
+        {
+          "value": "Eswatini: +268",
+          "text": "Eswatini: +268"
+        },
+        {
+          "value": "Ethiopia: +251",
+          "text": "Ethiopia: +251"
+        },
+        {
+          "value": "Fiji: +679",
+          "text": "Fiji: +679"
+        },
+        {
+          "value": "Finland: +358",
+          "text": "Finland: +358"
+        },
+        {
+          "value": "France: +33",
+          "text": "France: +33"
+        },
+        {
+          "value": "Gabon: +241",
+          "text": "Gabon: +241"
+        },
+        {
+          "value": "Gambia: +220",
+          "text": "Gambia: +220"
+        },
+        {
+          "value": "Georgia: +995",
+          "text": "Georgia: +995"
+        },
+        {
+          "value": "Germany: +49",
+          "text": "Germany: +49"
+        },
+        {
+          "value": "Ghana: +233",
+          "text": "Ghana: +233"
+        },
+        {
+          "value": "Greece: +30",
+          "text": "Greece: +30"
+        },
+        {
+          "value": "Grenada: +1-473",
+          "text": "Grenada: +1-473"
+        },
+        {
+          "value": "Guatemala: +502",
+          "text": "Guatemala: +502"
+        },
+        {
+          "value": "Guinea: +224",
+          "text": "Guinea: +224"
+        },
+        {
+          "value": "Guinea-Bissau: +245",
+          "text": "Guinea-Bissau: +245"
+        },
+        {
+          "value": "Guyana: +592",
+          "text": "Guyana: +592"
+        },
+        {
+          "value": "Haiti: +509",
+          "text": "Haiti: +509"
+        },
+        {
+          "value": "Honduras: +504",
+          "text": "Honduras: +504"
+        },
+        {
+          "value": "Hungary: +36",
+          "text": "Hungary: +36"
+        },
+        {
+          "value": "Iceland: +354",
+          "text": "Iceland: +354"
+        },
+        {
+          "value": "India: +91",
+          "text": "India: +91"
+        },
+        {
+          "value": "Indonesia: +62",
+          "text": "Indonesia: +62"
+        },
+        {
+          "value": "Iran: +98",
+          "text": "Iran: +98"
+        },
+        {
+          "value": "Iraq: +964",
+          "text": "Iraq: +964"
+        },
+        {
+          "value": "Ireland: +353",
+          "text": "Ireland: +353"
+        },
+        {
+          "value": "Israel: +972",
+          "text": "Israel: +972"
+        },
+        {
+          "value": "Italy: +39",
+          "text": "Italy: +39"
+        },
+        {
+          "value": "Jamaica: +1-876",
+          "text": "Jamaica: +1-876"
+        },
+        {
+          "value": "Japan: +81",
+          "text": "Japan: +81"
+        },
+        {
+          "value": "Jordan: +962",
+          "text": "Jordan: +962"
+        },
+        {
+          "value": "Kazakhstan: +7",
+          "text": "Kazakhstan: +7"
+        },
+        {
+          "value": "Kenya: +254",
+          "text": "Kenya: +254"
+        },
+        {
+          "value": "Kiribati: +686",
+          "text": "Kiribati: +686"
+        },
+        {
+          "value": "Korea, North: +850",
+          "text": "Korea, North: +850"
+        },
+        {
+          "value": "Korea, South: +82",
+          "text": "Korea, South: +82"
+        },
+        {
+          "value": "Kuwait: +965",
+          "text": "Kuwait: +965"
+        },
+        {
+          "value": "Kyrgyzstan: +996",
+          "text": "Kyrgyzstan: +996"
+        },
+        {
+          "value": "Laos: +856",
+          "text": "Laos: +856"
+        },
+        {
+          "value": "Latvia: +371",
+          "text": "Latvia: +371"
+        },
+        {
+          "value": "Lebanon: +961",
+          "text": "Lebanon: +961"
+        },
+        {
+          "value": "Lesotho: +266",
+          "text": "Lesotho: +266"
+        },
+        {
+          "value": "Liberia: +231",
+          "text": "Liberia: +231"
+        },
+        {
+          "value": "Libya: +218",
+          "text": "Libya: +218"
+        },
+        {
+          "value": "Liechtenstein: +423",
+          "text": "Liechtenstein: +423"
+        },
+        {
+          "value": "Lithuania: +370",
+          "text": "Lithuania: +370"
+        },
+        {
+          "value": "Luxembourg: +352",
+          "text": "Luxembourg: +352"
+        },
+        {
+          "value": "Madagascar: +261",
+          "text": "Madagascar: +261"
+        },
+        {
+          "value": "Malawi: +265",
+          "text": "Malawi: +265"
+        },
+        {
+          "value": "Malaysia: +60",
+          "text": "Malaysia: +60"
+        },
+        {
+          "value": "Maldives: +960",
+          "text": "Maldives: +960"
+        },
+        {
+          "value": "Mali: +223",
+          "text": "Mali: +223"
+        },
+        {
+          "value": "Malta: +356",
+          "text": "Malta: +356"
+        },
+        {
+          "value": "Marshall Islands: +692",
+          "text": "Marshall Islands: +692"
+        },
+        {
+          "value": "Mauritania: +222",
+          "text": "Mauritania: +222"
+        },
+        {
+          "value": "Mauritius: +230",
+          "text": "Mauritius: +230"
+        },
+        {
+          "value": "Mexico: +52",
+          "text": "Mexico: +52"
+        },
+        {
+          "value": "Micronesia: +691",
+          "text": "Micronesia: +691"
+        },
+        {
+          "value": "Moldova: +373",
+          "text": "Moldova: +373"
+        },
+        {
+          "value": "Monaco: +377",
+          "text": "Monaco: +377"
+        },
+        {
+          "value": "Mongolia: +976",
+          "text": "Mongolia: +976"
+        },
+        {
+          "value": "Montenegro: +382",
+          "text": "Montenegro: +382"
+        },
+        {
+          "value": "Morocco: +212",
+          "text": "Morocco: +212"
+        },
+        {
+          "value": "Mozambique: +258",
+          "text": "Mozambique: +258"
+        },
+        {
+          "value": "Myanmar: +95",
+          "text": "Myanmar: +95"
+        },
+        {
+          "value": "Namibia: +264",
+          "text": "Namibia: +264"
+        },
+        {
+          "value": "Nauru: +674",
+          "text": "Nauru: +674"
+        },
+        {
+          "value": "Nepal: +977",
+          "text": "Nepal: +977"
+        },
+        {
+          "value": "Netherlands: +31",
+          "text": "Netherlands: +31"
+        },
+        {
+          "value": "New Zealand: +64",
+          "text": "New Zealand: +64"
+        },
+        {
+          "value": "Nicaragua: +505",
+          "text": "Nicaragua: +505"
+        },
+        {
+          "value": "Niger: +227",
+          "text": "Niger: +227"
+        },
+        {
+          "value": "Nigeria: +234",
+          "text": "Nigeria: +234"
+        },
+        {
+          "value": "North Macedonia: +389",
+          "text": "North Macedonia: +389"
+        },
+        {
+          "value": "Norway: +47",
+          "text": "Norway: +47"
+        },
+        {
+          "value": "Oman: +968",
+          "text": "Oman: +968"
+        },
+        {
+          "value": "Pakistan: +92",
+          "text": "Pakistan: +92"
+        },
+        {
+          "value": "Palau: +680",
+          "text": "Palau: +680"
+        },
+        {
+          "value": "Panama: +507",
+          "text": "Panama: +507"
+        },
+        {
+          "value": "Papua New Guinea: +675",
+          "text": "Papua New Guinea: +675"
+        },
+        {
+          "value": "Paraguay: +595",
+          "text": "Paraguay: +595"
+        },
+        {
+          "value": "Peru: +51",
+          "text": "Peru: +51"
+        },
+        {
+          "value": "Philippines: +63",
+          "text": "Philippines: +63"
+        },
+        {
+          "value": "Poland: +48",
+          "text": "Poland: +48"
+        },
+        {
+          "value": "Portugal: +351",
+          "text": "Portugal: +351"
+        },
+        {
+          "value": "Qatar: +974",
+          "text": "Qatar: +974"
+        },
+        {
+          "value": "Romania: +40",
+          "text": "Romania: +40"
+        },
+        {
+          "value": "Russia: +7",
+          "text": "Russia: +7"
+        },
+        {
+          "value": "Rwanda: +250",
+          "text": "Rwanda: +250"
+        },
+        {
+          "value": "Saint Kitts and Nevis: +1-869",
+          "text": "Saint Kitts and Nevis: +1-869"
+        },
+        {
+          "value": "Saint Lucia: +1-758",
+          "text": "Saint Lucia: +1-758"
+        },
+        {
+          "value": "Saint Vincent and the Grenadines: +1-784",
+          "text": "Saint Vincent and the Grenadines: +1-784"
+        },
+        {
+          "value": "Samoa: +685",
+          "text": "Samoa: +685"
+        },
+        {
+          "value": "San Marino: +378",
+          "text": "San Marino: +378"
+        },
+        {
+          "value": "Sao Tome and Principe: +239",
+          "text": "Sao Tome and Principe: +239"
+        },
+        {
+          "value": "Saudi Arabia: +966",
+          "text": "Saudi Arabia: +966"
+        },
+        {
+          "value": "Senegal: +221",
+          "text": "Senegal: +221"
+        },
+        {
+          "value": "Serbia: +381",
+          "text": "Serbia: +381"
+        },
+        {
+          "value": "Seychelles: +248",
+          "text": "Seychelles: +248"
+        },
+        {
+          "value": "Sierra Leone: +232",
+          "text": "Sierra Leone: +232"
+        },
+        {
+          "value": "Singapore: +65",
+          "text": "Singapore: +65"
+        },
+        {
+          "value": "Slovakia: +421",
+          "text": "Slovakia: +421"
+        },
+        {
+          "value": "Slovenia: +386",
+          "text": "Slovenia: +386"
+        },
+        {
+          "value": "Solomon Islands: +677",
+          "text": "Solomon Islands: +677"
+        },
+        {
+          "value": "Somalia: +252",
+          "text": "Somalia: +252"
+        },
+        {
+          "value": "South Sudan: +211",
+          "text": "South Sudan: +211"
+        },
+        {
+          "value": "Spain: +34",
+          "text": "Spain: +34"
+        },
+        {
+          "value": "Sri Lanka: +94",
+          "text": "Sri Lanka: +94"
+        },
+        {
+          "value": "Sudan: +249",
+          "text": "Sudan: +249"
+        },
+        {
+          "value": "Suriname: +597",
+          "text": "Suriname: +597"
+        },
+        {
+          "value": "Sweden: +46",
+          "text": "Sweden: +46"
+        },
+        {
+          "value": "Switzerland: +41",
+          "text": "Switzerland: +41"
+        },
+        {
+          "value": "Syria: +963",
+          "text": "Syria: +963"
+        },
+        {
+          "value": "Taiwan: +886",
+          "text": "Taiwan: +886"
+        },
+        {
+          "value": "Tajikistan: +992",
+          "text": "Tajikistan: +992"
+        },
+        {
+          "value": "Tanzania: +255",
+          "text": "Tanzania: +255"
+        },
+        {
+          "value": "Thailand: +66",
+          "text": "Thailand: +66"
+        },
+        {
+          "value": "Timor-Leste: +670",
+          "text": "Timor-Leste: +670"
+        },
+        {
+          "value": "Togo: +228",
+          "text": "Togo: +228"
+        },
+        {
+          "value": "Tonga: +676",
+          "text": "Tonga: +676"
+        },
+        {
+          "value": "Trinidad and Tobago: +1-868",
+          "text": "Trinidad and Tobago: +1-868"
+        },
+        {
+          "value": "Tunisia: +216",
+          "text": "Tunisia: +216"
+        },
+        {
+          "value": "Turkey: +90",
+          "text": "Turkey: +90"
+        },
+        {
+          "value": "Turkmenistan: +993",
+          "text": "Turkmenistan: +993"
+        },
+        {
+          "value": "Tuvalu: +688",
+          "text": "Tuvalu: +688"
+        },
+        {
+          "value": "Uganda: +256",
+          "text": "Uganda: +256"
+        },
+        {
+          "value": "Ukraine: +380",
+          "text": "Ukraine: +380"
+        },
+        {
+          "value": "United Arab Emirates: +971",
+          "text": "United Arab Emirates: +971"
+        },
+        {
+          "value": "United Kingdom: +44",
+          "text": "United Kingdom: +44"
+        },
+        {
+          "value": "United States: +1",
+          "text": "United States: +1"
+        },
+        {
+          "value": "Uruguay: +598",
+          "text": "Uruguay: +598"
+        },
+        {
+          "value": "Uzbekistan: +998",
+          "text": "Uzbekistan: +998"
+        },
+        {
+          "value": "Vanuatu: +678",
+          "text": "Vanuatu: +678"
+        },
+        {
+          "value": "Vatican City: +379",
+          "text": "Vatican City: +379"
+        },
+        {
+          "value": "Venezuela: +58",
+          "text": "Venezuela: +58"
+        },
+        {
+          "value": "Vietnam: +84",
+          "text": "Vietnam: +84"
+        },
+        {
+          "value": "Yemen: +967",
+          "text": "Yemen: +967"
+        },
+        {
+          "value": "Zambia: +260",
+          "text": "Zambia: +260"
+        },
+        {
+          "value": "Zimbabwe: +263",
+          "text": "Zimbabwe: +263"
+        },
+        {
+          "value": "",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "key": "phone",
+      "type": "tel",
+      "autocomplete": "tel-national",
+      "fullWidth": false,
+      "label": "Contact Number",
+      "required": true
+    }
+  ]
+}

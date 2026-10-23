@@ -1,0 +1,111 @@
+Scroll stability correction ? 21 October 2026
+- Photographs now remain stationary within their existing frames. Removed scroll
+  drift, hover zoom, picture mask movement and challenge crop panning.
+- Utilisation imagery, the work-process visual and the team section index now use
+  normal document flow. The main navigation remains available, without its prior
+  scroll-triggered positional transform.
+- Challenge controls use a shared grid cell sized to the tallest item. Inactive
+  items are inert and not visible; controls and arrow/Home/End keys retain their
+  behavior. No nested scroller or scroll-snap is created. Without JavaScript all
+  four points remain readable in normal flow.
+- Purposeful short text/opacity reveals, diagram strokes, process emphasis and
+  article reading progress remain. Reduced-motion preferences still apply.
+- The short-screen mobile menu retains its necessary overflow so every link
+  remains reachable; content sections have no independent scroll areas.
+- Previous implementation is retained in .undo/scroll-stability/.
+
+Earlier implementation record (movement effects described below are superseded):
+
+Visual storytelling and motion pass — 21 October 2026
+
+Scope
+Preserved all source copy, branding, section order, routes, original links and image
+bytes. Applied the visual layer after the shared content/hierarchy layer for all
+37 pages. No packages, generated photos, external stock imagery or new claims added.
+
+Visual explanations and factual grounding
+- Stadium utilisation shows the original 25-to-30 event-day and 335-to-340 off-day
+  ranges. Solid lengths show the lower bound and muted extensions the upper bound
+  on a 365-day annual scale. No midpoint, count-up animation or invented percentage
+  is presented as a fact. Original explanatory paragraph remains fully visible.
+- The delivery-consortium diagram connects ACG with six disciplines named in its
+  original paragraph. It is a hub-and-spoke relationship, not an invented sequence.
+- APO Group's 2007 founding and over-300-client figures come directly from the
+  original backing paragraph; the proof graphic explicitly identifies APO Group.
+- The five project gates remain separate from the six execution steps. Their
+  different counts/meanings are retained; no unsupported gate-to-step mapping added.
+- The Victory District model retains all three original verticals and their full
+  explanations. Its branch graphic depicts a shared district ecosystem, not a
+  new timeline, financial projection or performance claim.
+
+Composition rhythm
+Home: type/photo hero and glass context -> image/range evidence -> problem statement
+and guided failure sequence -> panoramic mission and open principles.
+Who We Are: overview -> photo-led provenance -> collaboration map -> backing proof
+-> image-led local method -> comparison -> photographic contact invitation.
+What We Do: overview -> connected gate diagram -> sticky image and six-step reading
+sequence -> photographic model invitation.
+Victory District: overview -> operating conditions/pipeline -> immersive adaptation
+statement -> connected ecosystem -> stakeholder value mapping.
+Team: overview/index -> portrait left -> portrait right -> board portraits -> compact
+academic directory -> contact invitation. All original people and order retained.
+Profiles: identity -> portrait and biography -> contextual reference.
+Articles: actual story image paired with headline -> uninterrupted reading layout,
+original quotations and source references. News preserves chronological order.
+Contact: original introduction/email and official-form action on one glass surface.
+
+Glass and image treatment
+- Glass is reserved for existing navigation, hero context, work progress and selected
+  invitations/overlays on actual imagery. Text has a 94%-opaque paper surface, a fine
+  border and controlled 16px blur; an opaque fallback is supplied.
+- Reduced-transparency and increased-contrast preferences restore opaque surfaces.
+- Shared 8px photographic frames and existing 16px controls remain consistent.
+- Original ACG photographs are reused for their infrastructure context. New image
+  instances have descriptive alternatives or context-derived identity labels.
+
+Purposeful motion
+- One restrained headline entrance, selected image masks, SVG connection tracing,
+  range-bar reveals and quotation emphasis. Original text is visible by default.
+- Desktop drift is limited to +/-8px on selected opening images. No mobile drift.
+- Work-sequence emphasis and the six-part progress marker follow reading position.
+  They do not advance automatically, change copy, scroll the page or capture focus.
+- Articles have a small scroll-position indicator. No live percentage announcement.
+- Linked images zoom only 2.5% on mouse hover. Buttons/links use consistent existing
+  feedback. No rotating/lifting cards, bounce, pointer-following effects or autoplay.
+- Motion uses IntersectionObserver, Web Animations and one passive frame-coalesced
+  scroll update. There are no timers or perpetual animation loops.
+- Reduced motion cancels current animations and disables reveals. Process and
+  reading position can still update as useful state, without transition effects.
+- No-JavaScript mode preserves all copy, diagrams, native disclosures and navigation;
+  the enhanced work-progress overlay is hidden rather than showing a frozen state.
+
+Verification
+- Exact source-fragment, original image bytes, route, link, CTA ownership and anchor
+  checks pass. Infographic facts and section-composition variation are checked.
+- All 37 routes pass at 1440, 768 and 390px: HTTP 200, no overflow/broken images or
+  runtime exceptions. Desktop/mobile representative screenshots visually reviewed.
+- Additional 320/1024px checks cover readable copy, touch targets and expanded bios.
+- All six work-step emphasis/progress states pass. Article progress moves from 0
+  through its midpoint to 1 at the end. No script errors recorded.
+- Reduced motion before load and during active motion, reduced transparency and
+  no-JavaScript content/navigation/diagram fallbacks pass.
+- Existing mobile navigation, keyboard focus/sequence, native biographies and
+  reduced-motion homepage regression pass. Mobile gate alignment corrected in QA.
+- Aftermark reviewed for spacing/type rhythm, contrast, shape consistency, restrained
+  glass, legitimate data, functional links and responsive behavior.
+- Conservative contrast calculations for the glass surface over a black image:
+  muted body text 5.31:1 and heading text 12.70:1. Range-bound color against its
+  track is 3.09:1; all numeric ranges are also provided as readable text.
+
+Limits
+Manual screen-reader and non-Chrome browser testing remain unperformed. Official
+contact form processing remains external per the user's earlier selection. Work is
+local and unpublished. Previous implementation: .undo/visual-storytelling/.
+
+Implementation
+src/templates/storytelling.mjs: content-aware visual explanations and composition.
+src/styles/storytelling.css: photographic, infographic and glass treatments.
+src/scripts/motion.js: progressive, preference-aware sitewide interactions.
+scripts/verify-storytelling.mjs: facts, source accessibility and composition checks.
+scripts/browser-storytelling-qa.mjs: process, reading and preference/fallback checks.
+.qa/storytelling-results.json: detailed browser interaction results.

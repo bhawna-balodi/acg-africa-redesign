@@ -1,0 +1,136 @@
+/* Homepage-derived normalization, not a new scale. The original fluid curves
+   and breakpoints are retained and snapped to 4px. Equidistant values round up
+   to preserve emphasis/readability (18→20, 14→16, 30→32).
+   This final role layer owns typography only; existing CSS owns composition. */
+:root{
+ --type-display:round(nearest,clamp(64px,8vw,120px),4px);
+ --type-prefix:round(nearest,clamp(40px,5vw,72px),4px);
+ --type-page:round(nearest,clamp(44px,6.2vw,88px),4px);
+ --type-section:round(nearest,clamp(32px,3.8vw,56px),4px);
+ --type-item:round(nearest,clamp(24px,2.1vw,30px),4px);
+ --type-principle:round(nearest,clamp(24px,2vw,28px),4px);
+ --type-closing:round(nearest,clamp(32px,3.5vw,48px),4px);
+ --type-lead:round(nearest,clamp(20px,1.7vw,24px),4px);
+ /* Body copy intentionally uses the user's requested 18px exception. */
+ --type-body:18px;--type-ui:16px;--type-label:16px;--type-support:16px;
+ --type-diagram-label:20px;
+ --type-story-title:round(nearest,clamp(32px,3.7vw,52px),4px);
+ --type-feature:round(nearest,clamp(28px,3vw,44px),4px);
+ --type-card:24px;--type-related:20px;
+ --type-identity:round(nearest,clamp(28px,3vw,40px),4px);
+ --type-data:round(nearest,clamp(28px,3vw,40px),4px);
+ --type-stat:round(nearest,clamp(48px,6vw,80px),4px);
+ --type-sequence:calc(round(nearest,clamp(80px,8vw,112px),4px) - 28px);
+ --banner-title:var(--type-page);--banner-story-title:var(--type-story-title);
+ --type-heading-weight:700;--type-item-weight:600;--type-body-weight:400;--type-display-weight:800;--type-nav-weight:500;
+ --type-heading-leading:1.13;--type-item-leading:1.3;--type-body-leading:1.65;
+ --type-lead-leading:1.5;--type-ui-leading:1.5;
+ --type-support-leading:1.6;--type-quote-leading:1.55;--type-compact-leading:1.25;--type-dense-leading:1.4;
+ --type-card-leading:1.35;--type-feature-leading:1.2;
+ --type-display-leading:1.05;--type-prefix-leading:1.08;--type-closing-leading:1.15;
+ --type-heading-tracking:-.035em;--type-item-tracking:-.02em;--type-label-tracking:.08em;
+ --type-paragraph-gap:24px;--type-heading-gap:24px;--reading-width:720px;
+}
+@media(max-width:1000px){
+ :root{
+  --type-display:round(nearest,clamp(56px,8vw,88px),4px);
+  --type-prefix:round(nearest,clamp(32px,5vw,48px),4px);
+ }
+}
+@media(max-width:700px){
+ :root{
+  --type-display:round(nearest,clamp(48px,14vw,80px),4px);
+  --type-prefix:round(nearest,clamp(30px,8vw,44px),4px);
+  --type-section:round(nearest,clamp(30px,7.8vw,40px),4px);
+  --type-item:24px;--type-principle:24px;--type-closing:32px;--type-lead:20px;
+  --type-diagram-label:16px;
+  --type-data:32px;
+  --type-related:20px;--type-stat:round(nearest,clamp(40px,10vw,64px),4px);
+  --type-story-title:round(nearest,clamp(32px,8vw,44px),4px);
+ }
+}
+body.storytelling-site{font-family:var(--body);font-size:var(--type-body);font-weight:var(--type-body-weight);line-height:var(--type-body-leading)}
+.storytelling-site p{font-size:var(--type-body);font-weight:var(--type-body-weight);line-height:var(--type-body-leading);letter-spacing:normal}
+.storytelling-site p+p{margin-top:var(--type-paragraph-gap)}
+.storytelling-site :is(.prose,.article-prose,.profile-biography){font-size:var(--type-body);line-height:var(--type-body-leading)}
+.storytelling-site :is(.prose,.article-prose,.profile-biography) p{line-height:var(--type-body-leading)}
+.storytelling-site :is(.prose,.article-prose) :is(h2,h3)+p{margin-top:var(--type-heading-gap)}
+.storytelling-site main :is(.copy,.prose,.article-prose,.profile-biography,.biography-history,.group-purpose,.group-remit) li{
+ font-size:var(--type-body);font-weight:var(--type-body-weight);line-height:var(--type-body-leading);letter-spacing:normal;
+}
+.storytelling-site main :is(.prose,.article-prose,.profile-biography,.biography-history,.group-purpose,.group-remit) li+li{margin-top:var(--type-paragraph-gap)}
+.storytelling-site :is(strong,b){font-weight:var(--type-item-weight)}
+/* Same semantic role across page families; source heading levels remain intact. */
+.storytelling-site .page-intro h1{font-size:var(--type-page);font-weight:var(--type-heading-weight);line-height:var(--type-prefix-leading);letter-spacing:var(--type-heading-tracking)}
+.storytelling-site .story-opening h1{font-size:var(--type-story-title);line-height:var(--type-heading-leading)}
+.storytelling-site :is(.inner-section,.editorial-intro,.mission-heading,.challenge-explanation,.leadership-chapter,.method-copy) h2,
+.storytelling-site .evidence-row>.prose h2,
+.storytelling-site .editorial-row>div:first-child h2,
+.storytelling-site .model-invitation .editorial-row h2,
+.storytelling-site .adaptation-section .editorial-row h2,
+.storytelling-site .comparison-section .acgx-title{
+ font-size:var(--type-section);font-weight:var(--type-heading-weight);line-height:var(--type-heading-leading);letter-spacing:var(--type-heading-tracking);
+}
+.storytelling-site :is(.inner-section,.model-verticals) h3,
+.storytelling-site :is(.steps__title,.gate-process .gates__step,.stakeholder-mapping .elementor-icon-box-title){
+ font-size:var(--type-item);font-weight:var(--type-item-weight);line-height:var(--type-item-leading);letter-spacing:var(--type-item-tracking);
+}
+.storytelling-site :is(h1,h2,h3) strong{font-weight:inherit}
+/* Preserve the actual homepage hero spans, including their original weights. */
+.storytelling-site .hero-title .headline-line{font-size:var(--type-prefix);font-weight:var(--type-heading-weight);line-height:var(--type-prefix-leading);letter-spacing:-.045em}
+.storytelling-site .hero-title .headline-accent{font-size:var(--type-display);font-weight:var(--type-display-weight);line-height:var(--type-display-leading)}
+.storytelling-site .hero-title .headline-tail{font-size:var(--type-card);font-weight:var(--type-body-weight);line-height:var(--type-lead-leading);letter-spacing:normal}
+.storytelling-site .hero-principles ul{font-size:var(--type-body);line-height:var(--type-body-leading)}
+.storytelling-site .hero-principles li{font-size:var(--type-body);line-height:var(--type-body-leading)}
+.storytelling-site :is(.page-lead,.group-lead,.profile-role,.comparison-section .acgx-lead,.article-lead),
+.storytelling-site :is(.page-lead,.group-lead,.profile-role,.article-lead) p,
+.storytelling-site .pipeline-explanation .prose>.page-block:last-child,
+.storytelling-site .pipeline-explanation .prose>.page-block:last-child p{
+ font-size:var(--type-lead);font-weight:var(--type-body-weight);line-height:var(--type-lead-leading);letter-spacing:normal;
+}
+.storytelling-site :is(.closing-note,.why-copy .closing-note),
+.storytelling-site :is(.closing-note,.why-copy .closing-note) p,
+.storytelling-site .failure-list p{
+ font-size:var(--type-item);font-weight:var(--type-item-weight);line-height:var(--type-item-leading);letter-spacing:var(--type-item-tracking);
+}
+.storytelling-site .sequence-story>.h3 h3{font-size:var(--type-card);font-weight:var(--type-item-weight);line-height:var(--type-item-leading);letter-spacing:var(--type-item-tracking)}
+.storytelling-site .mission-grid h3{font-size:var(--type-principle);font-weight:var(--type-item-weight);line-height:var(--type-item-leading);letter-spacing:var(--type-item-tracking)}
+.storytelling-site .mission-close h3,.storytelling-site .model-conclusion h3{font-size:var(--type-closing);font-weight:var(--type-heading-weight);line-height:var(--type-closing-leading);letter-spacing:-.03em}
+.storytelling-site .challenge-chapter .challenge-reasons li:nth-child(n+4){font-size:var(--type-body);font-weight:var(--type-body-weight);line-height:var(--type-quote-leading)}
+.storytelling-site .challenge-chapter .challenge-reasons li:last-child em{font-size:var(--type-card);line-height:var(--type-compact-leading);letter-spacing:var(--type-item-tracking)}
+.storytelling-site .challenge-chapter .challenge-reasons li:nth-child(n+4)>strong{font-weight:var(--type-heading-weight)}
+.storytelling-site :is(.eyebrow,.hero-title .eyebrow,.editorial-intro .eyebrow){font:var(--type-item-weight) var(--type-label)/var(--type-ui-leading) var(--body);letter-spacing:var(--type-label-tracking)}
+/* Directories, career roles, captions and citations are supporting content. */
+.storytelling-site :is(.person .person-name,.research-index .person .person-name) h3{font-size:var(--type-card);font-weight:var(--type-heading-weight);line-height:var(--type-compact-leading);letter-spacing:var(--type-item-tracking)}
+.storytelling-site .leadership-chapter .prose>.page-block:first-child h3{font-size:var(--type-identity);font-weight:var(--type-heading-weight);line-height:var(--type-item-leading)}
+.storytelling-site :is(.person-role,.person .person-role,.biography-reference,.article-reference,.apoc-card__date,.apoc-card__footer,.acgx-note,.gates__vlabel,.footer-bottom),
+.storytelling-site :is(.person-role,.biography-reference,.article-reference,.footer-bottom) p{
+ font-size:var(--type-support);font-weight:var(--type-body-weight);line-height:var(--type-support-leading);letter-spacing:normal;
+}
+.storytelling-site .comparison-section .acgx-list em{font-size:var(--type-support);line-height:var(--type-support-leading)}
+.storytelling-site .footer-copy p{font-size:var(--type-support);line-height:var(--type-support-leading)}
+.storytelling-site :is(.range-caption span,.backing-proof span){font-size:var(--type-support);line-height:var(--type-ui-leading)}
+.storytelling-site .failure-list span{font-size:var(--type-sequence);font-weight:var(--type-heading-weight);line-height:1;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.storytelling-site .range-caption strong{font-size:var(--type-data);font-weight:var(--type-item-weight);line-height:var(--type-closing-leading);letter-spacing:var(--type-heading-tracking)}
+.storytelling-site .backing-proof strong{font-size:var(--type-stat);font-weight:var(--type-item-weight);line-height:var(--type-display-leading);letter-spacing:-.045em}
+.storytelling-site :is(.work-process .steps__card,.work-narrative .steps__card):before{font-size:var(--type-principle);font-weight:var(--type-item-weight);line-height:1.2}
+.storytelling-site .collaboration-map li{font-size:var(--type-diagram-label);font-weight:var(--type-item-weight);line-height:var(--type-dense-leading)}
+.storytelling-site .operating-requirements li strong{font-size:var(--type-body);font-weight:var(--type-item-weight);line-height:var(--type-dense-leading)}
+.storytelling-site .news-feature .apoc-card__title{font-size:var(--type-feature);font-weight:var(--type-heading-weight);line-height:1.2;letter-spacing:-.03em}
+.storytelling-site .news-card:not(.news-feature) .apoc-card__title{font-size:var(--type-card);font-weight:var(--type-item-weight);line-height:var(--type-card-leading);letter-spacing:var(--type-item-tracking)}
+.storytelling-site .article-related h3{font-size:var(--type-related);font-weight:var(--type-item-weight);line-height:var(--type-dense-leading);letter-spacing:var(--type-item-tracking)}
+.storytelling-site .article-prose :is(h2,.article-subheading){font-size:var(--type-item);font-weight:var(--type-heading-weight);line-height:var(--type-compact-leading)}
+.storytelling-site .article-prose h3{font-size:var(--type-card);font-weight:var(--type-item-weight);line-height:var(--type-item-leading)}
+.storytelling-site.story-page .article-quotation,
+.storytelling-site .article-quotation p{font-size:var(--type-lead);font-weight:var(--type-body-weight);line-height:var(--type-quote-leading);letter-spacing:normal}
+.storytelling-site .article-share h2{font-size:var(--type-ui);font-weight:var(--type-item-weight);line-height:var(--type-ui-leading);letter-spacing:normal}
+.storytelling-site :is(button,input,select,textarea){font-family:var(--body)}
+.storytelling-site nav:where(#navigation) a{font-size:var(--type-ui);font-weight:var(--type-nav-weight);line-height:var(--type-ui-leading);letter-spacing:normal}
+.storytelling-site :is(a,button).cta,
+.storytelling-site .mission-close .action :is(a,button).cta,
+.storytelling-site :is(.menu-toggle,.biography-more summary,.section-index a,.profile-reference,.article-return a,.article-exit .text-link){font-size:var(--type-ui);font-weight:var(--type-item-weight);line-height:var(--type-ui-leading);letter-spacing:normal}
+.storytelling-site .contact-field label{font-size:var(--type-ui);font-weight:var(--type-item-weight);line-height:var(--type-ui-leading)}
+.storytelling-site :is(.contact-field input,.contact-field select,.contact-field textarea,.contact-copy-fallback){font-size:var(--type-ui);font-weight:var(--type-body-weight);line-height:var(--type-ui-leading)}
+.storytelling-site .contact-form :is(.contact-required,.contact-delivery,.contact-status,.field-error){font-size:var(--type-ui);font-weight:var(--type-body-weight);line-height:var(--type-support-leading)}
+.storytelling-site .contact-introduction p{font-size:var(--type-body);line-height:var(--type-body-leading)}
+.storytelling-site .process-position,.storytelling-site .sequence-position{font-size:var(--type-ui);font-weight:var(--type-item-weight);line-height:var(--type-ui-leading);letter-spacing:.04em}

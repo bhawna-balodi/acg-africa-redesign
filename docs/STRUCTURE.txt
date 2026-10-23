@@ -1,0 +1,70 @@
+﻿ACG homepage — project structure
+
+Complete static website with 37 local routes: homepage, six main pages, 18 news
+articles and 12 linked advisory profiles. Internal navigation stays local.
+The official enquiry form remains external by prior user choice; email, LinkedIn
+and third-party resources retain their genuine external destinations.
+
+Current commands
+- npm run content:import: imports the homepage and all additional source pages.
+- node scripts/fetch-pages.mjs: refreshes six main-page and 18 article snapshots.
+- node scripts/fetch-assets.mjs: downloads missing original image assets.
+- npm run build: builds all local routes under dist/.
+- npm run verify: validates original content, assets, routes and anchor targets.
+- npm run dev: serves directory routes at http://localhost:4173/.
+- node scripts/browser-pages-qa.mjs: checks all routes at three viewport widths.
+
+Additional files
+src/templates/storytelling.mjs   Source-grounded graphics, imagery and composition
+src/styles/storytelling.css      Shared infographic, photographic and glass treatments
+scripts/verify-storytelling.mjs  Original-fact and visual-structure assertions
+scripts/browser-storytelling-qa.mjs Motion, progress, glass and preference QA
+docs/VISUAL-STORYTELLING.txt      Design, factual basis, motion and fallback decisions
+src/templates/presentation.mjs   Content relationships, hierarchy and CTA ownership
+src/styles/content-system.css   Shared type roles, components and narrative patterns
+docs/SITEWIDE-CONTENT-AUDIT.txt  Before/after audit and content decisions
+docs/CTA-OWNERSHIP.json          Generated inventory of action hierarchy and ownership
+scripts/browser-context-qa.mjs  Reading, touch, keyboard and native disclosure QA
+sources/page-manifest.json       Original page URLs mapped to saved HTML files
+sources/articles/               Article snapshots with short hashed filenames
+scripts/import-pages.mjs         Interior-page, profile and article compositions
+src/content/page-provenance.json Original text fragments for additional pages
+scripts/verify-pages.mjs         Original wording and local-navigation assertions
+.qa/pages-results.json           Browser results for every local route
+.undo/full-site/                 Snapshot before multi-page expansion
+
+Earlier homepage architecture details follow.
+
+sources/                    Website snapshots and downloaded font stylesheet
+src/content/                Generated exact copy, provenance and asset mappings
+src/templates/layout.mjs    HTML document, navigation, footer and metadata
+src/styles/site.css         Future of Sport visual system and responsive compositions
+src/scripts/site.js         Navigation and stable compact header behavior
+src/scripts/motion.js       Selective typography/photo entrance enhancements
+src/scripts/sequence.js     Accessible manual four-point horizontal sequence
+public/assets/original/     Original ACG image files
+public/assets/fonts/        Self-hosted Manrope plus license; prior fonts retained
+scripts/import-content.mjs  Content extraction and four-section composition
+scripts/build.mjs           Static output, disclosure/sequence markup, asset dimensions
+scripts/verify.mjs          Exact content, section order, source assets and link checks
+scripts/browser-qa.mjs      Real Chrome viewport, navigation, disclosure and sequence QA
+dist/                       Generated website
+.qa/                        Local screenshots and results (excluded from Git)
+.undo/sports-redirection/   Previous architectural version (excluded from Git)
+
+Sections: introduction, Why this matters, The challenge we are solving, Our mission.
+25 exact source fragments, ten existing ACG image assets, no additional dependencies.
+
+Build: node scripts/import-content.mjs then node scripts/build.mjs
+Verify: node scripts/verify.mjs
+Preview: node scripts/serve.mjs then http://127.0.0.1:4173/
+See docs/UI-REVIEW.txt for the current design audit, tests and limitations.
+
+Current layout system (refinement pass)
+- Shared 1312px container, 12 desktop columns, 32px gutters.
+- Repeated 5/7 split across Why, Challenge and Mission; inverse 7/5 for the hero.
+- Responsive section spacing 96/80/64px and major group spacing 48/40/32px.
+- Source composition remains in scripts/import-content.mjs; all visual spacing
+  tokens and responsive grid rules remain in src/styles/site.css.
+- Pre-refinement files are saved locally under .undo/layout-refinement/.
+- Current audit and measured alignment results are documented in docs/UI-REVIEW.txt.

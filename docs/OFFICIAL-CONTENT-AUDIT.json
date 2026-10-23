@@ -1,0 +1,184 @@
+{
+  "date": "2026-10-22T09:28:30.692Z",
+  "sources": [
+    {
+      "slug": "/",
+      "source": "https://acgafrica.com/",
+      "file": "sources/home.html",
+      "sha256": "8f42194f432c7238710d0a8fcf54119b3783536edf56ff3602ffb19b2a4c9bf6",
+      "checkedTextWidgets": 25
+    },
+    {
+      "slug": "who-we-are",
+      "source": "https://acgafrica.com/who-we-are/",
+      "file": "sources/who-we-are.html",
+      "sha256": "b21e129a7b40ad48040bc81de5461251f230522efaca277f1f87f734c43cce6c",
+      "checkedTextWidgets": 22
+    },
+    {
+      "slug": "what-we-do",
+      "source": "https://acgafrica.com/what-we-do/",
+      "file": "sources/what-we-do.html",
+      "sha256": "01837d30ebc6e99256372255fa2d22143abda2b4fc9abf641f74f290ac76bcf6",
+      "checkedTextWidgets": 10
+    },
+    {
+      "slug": "victory-district",
+      "source": "https://acgafrica.com/victory-district/",
+      "file": "sources/victory-district.html",
+      "sha256": "a86592e7eced17ee3cc7e412da39bcc83b436cce7e86e691e033eb8f7b565fa4",
+      "checkedTextWidgets": 40
+    },
+    {
+      "slug": "our-team",
+      "source": "https://acgafrica.com/our-team/",
+      "file": "sources/our-team.html",
+      "sha256": "be1c2c2ac94a1456d796a9541bfc578cd979e3181133b76c4a338ce961040aa2",
+      "checkedTextWidgets": 99
+    },
+    {
+      "slug": "acg-news",
+      "source": "https://acgafrica.com/acg-news/",
+      "file": "sources/news.html",
+      "sha256": "adf0917ee4dee324985a1a713caf58ba921d2f2fd650ffc4a7701119ff933735",
+      "checkedTextWidgets": 4
+    },
+    {
+      "slug": "contact-us",
+      "source": "https://acgafrica.com/contact-us/",
+      "file": "sources/contact-us.html",
+      "sha256": "caa80d70ae1d20e017176599c9c8be4806fa0cbcc985bb2c7eb9fabff77e2baf",
+      "checkedTextWidgets": 1
+    },
+    {
+      "slug": "former-damac-senior-vice-president-paulo-j-cruz-appointed-founding-ceo-of-african-collaboration-group-acg-to-spearhead-sports-and-entertainment-district-development-across-africa",
+      "source": "https://acgafrica.com/former-damac-senior-vice-president-paulo-j-cruz-appointed-founding-ceo-of-african-collaboration-group-acg-to-spearhead-sports-and-entertainment-district-development-across-africa/",
+      "file": "sources/articles/a6109351315870a1.html",
+      "sha256": "8fe92aedbfbad957f2e83a087bfa5480463216d9ae26b4cbbcbc9d05a9a9376b",
+      "checkedTextWidgets": 9
+    },
+    {
+      "slug": "african-energy-chamber-aec-executive-chairman-nj-ayuk-joins-african-collaborations-group-acg-advisory-board-to-advance-sport-and-entertainment-districts-across-africa",
+      "source": "https://acgafrica.com/african-energy-chamber-aec-executive-chairman-nj-ayuk-joins-african-collaborations-group-acg-advisory-board-to-advance-sport-and-entertainment-districts-across-africa/",
+      "file": "sources/articles/c28bfbb2c5c03b28.html",
+      "sha256": "c48dea63ef6a96eb5836bef181a7f08372ece242f0c49e3d44a987dae5f33a2b",
+      "checkedTextWidgets": 9
+    },
+    {
+      "slug": "the-bench-chairman-and-future-hospitality-summit-fhs-founder-jonathan-worsley-joins-african-collaborations-group-acg-advisory-board-to-advance-sport-and-entertainment-districts-across-africa",
+      "source": "https://acgafrica.com/the-bench-chairman-and-future-hospitality-summit-fhs-founder-jonathan-worsley-joins-african-collaborations-group-acg-advisory-board-to-advance-sport-and-entertainment-districts-across-africa/",
+      "file": "sources/articles/d38c3ad97ab84db8.html",
+      "sha256": "397c0d024b7c6f07f3525c4562380d8638e71b8b7fc1ffc36b23d8d9ded292c1",
+      "checkedTextWidgets": 9
+    },
+    {
+      "slug": "acg-ceo-paulo-j-cruz-to-speak-at-the-angola-access-investment-conference-2026-in-luanda-on-how-sport-and-entertainment-districts-can-drive-inclusive-economic-growth-across-africa",
+      "source": "https://acgafrica.com/acg-ceo-paulo-j-cruz-to-speak-at-the-angola-access-investment-conference-2026-in-luanda-on-how-sport-and-entertainment-districts-can-drive-inclusive-economic-growth-across-africa/",
+      "file": "sources/articles/d53d41daaca51448.html",
+      "sha256": "1ebf128e6d70afdab82eb8c240738bf52d3521dcf278419e7f96c6a55cf25a57",
+      "checkedTextWidgets": 9
+    },
+    {
+      "slug": "invest-africa-ceo-uk-government-africa-investor-group-member-and-former-pwc-uk-africa-leader-chantele-carrington-joins-african-collaborations-group-acg-advisory-board-to-advance-sport-and-entertai",
+      "source": "https://acgafrica.com/invest-africa-ceo-uk-government-africa-investor-group-member-and-former-pwc-uk-africa-leader-chantele-carrington-joins-african-collaborations-group-acg-advisory-board-to-advance-sport-and-entertai/",
+      "file": "sources/articles/2d45119632c2c76e.html",
+      "sha256": "f946e0474d90093a670e44b312269a090064e644e3d1547edf39860ac5d387a8",
+      "checkedTextWidgets": 9
+    },
+    {
+      "slug": "former-caf-chief-operating-officer-and-founder-of-african-sports-investor-asi-abiola-ijasanmi-joins-african-collaborations-group-acg-advisory-board-to-advance-sport-and-entertainment-districts-acr",
+      "source": "https://acgafrica.com/former-caf-chief-operating-officer-and-founder-of-african-sports-investor-asi-abiola-ijasanmi-joins-african-collaborations-group-acg-advisory-board-to-advance-sport-and-entertainment-districts-acr/",
+      "file": "sources/articles/a6f1cd7c82e65913.html",
+      "sha256": "c95c091499f2cbe889b1a648bb31f35af423f8516d22a650fab06a1d5702981b",
+      "checkedTextWidgets": 9
+    },
+    {
+      "slug": "santiago-bernabeu-stadium-renovation-advisor-carlos-carrion-joins-african-collaborations-group-acg-advisory-board-to-advance-sport-and-entertainment-districts-across-africa",
+      "source": "https://acgafrica.com/santiago-bernabeu-stadium-renovation-advisor-carlos-carrion-joins-african-collaborations-group-acg-advisory-board-to-advance-sport-and-entertainment-districts-across-africa/",
+      "file": "sources/articles/b0c6f61fd11fc524.html",
+      "sha256": "aaa0737baf18e40c3c44b8f528ecc1d3f31ba94e81f48587b384174b29b24a5f",
+      "checkedTextWidgets": 9
+    },
+    {
+      "slug": "paulo-gomes-former-world-bank-executive-director-for-africa-and-afrochampions-co-chair-joins-african-collaborations-group-acg-advisory-board-to-advance-sport-and-entertainment-districts-across-afri",
+      "source": "https://acgafrica.com/paulo-gomes-former-world-bank-executive-director-for-africa-and-afrochampions-co-chair-joins-african-collaborations-group-acg-advisory-board-to-advance-sport-and-entertainment-districts-across-afri/",
+      "file": "sources/articles/d096cdd07eeb03b5.html",
+      "sha256": "eba29d714be2da8219ef6b698395380423ddb95bca33ac36a6c01d459be94398",
+      "checkedTextWidgets": 9
+    },
+    {
+      "slug": "world-football-summit-wfs-co-founder-and-managing-director-jan-alessie-joins-african-collaborations-group-acg-advisory-board-to-advance-sport-and-entertainment-districts-across-africa",
+      "source": "https://acgafrica.com/world-football-summit-wfs-co-founder-and-managing-director-jan-alessie-joins-african-collaborations-group-acg-advisory-board-to-advance-sport-and-entertainment-districts-across-africa/",
+      "file": "sources/articles/cbeeb484ba5a5a17.html",
+      "sha256": "71cbe803849f58aa8ffb7f5075a9cc2cdd6346682c0e06ec1fd7bf7b1707b580",
+      "checkedTextWidgets": 9
+    },
+    {
+      "slug": "sport-infrastructure-in-africa-bbc-world-news-interviews-acg-founder-nicolas-pompigne-mognard-on-the-transformation-ahead",
+      "source": "https://acgafrica.com/sport-infrastructure-in-africa-bbc-world-news-interviews-acg-founder-nicolas-pompigne-mognard-on-the-transformation-ahead/",
+      "file": "sources/articles/2b04dbc89ccb8378.html",
+      "sha256": "5a3ea22faf3925189c48566eff1a4b31fb9ded9f482553dddb7f9679b5e33a58",
+      "checkedTextWidgets": 9
+    },
+    {
+      "slug": "world-rugby-director-of-international-relations-and-member-services-clare-barrell-joins-african-collaborations-group-acg-advisory-board-to-advance-sport-and-entertainment-districts-across-africa",
+      "source": "https://acgafrica.com/world-rugby-director-of-international-relations-and-member-services-clare-barrell-joins-african-collaborations-group-acg-advisory-board-to-advance-sport-and-entertainment-districts-across-africa/",
+      "file": "sources/articles/8c8dbb0dd68b58c2.html",
+      "sha256": "4a1db9c803174f7695a54f112e580d4eddbc0f872926c254c81b9868c4bbbe3c",
+      "checkedTextWidgets": 9
+    },
+    {
+      "slug": "former-nba-africa-and-basketball-africa-league-executive-aicha-diop-joins-african-collaborations-group-acg-advisory-board-to-advance-sport-and-entertainment-districts-across-africa",
+      "source": "https://acgafrica.com/former-nba-africa-and-basketball-africa-league-executive-aicha-diop-joins-african-collaborations-group-acg-advisory-board-to-advance-sport-and-entertainment-districts-across-africa/",
+      "file": "sources/articles/a431e3a5e070e263.html",
+      "sha256": "3ce49567bbaf35f993661a27c9bc3da0e6a93543ffa4ef20bbaefae0a1f4cd9f",
+      "checkedTextWidgets": 9
+    },
+    {
+      "slug": "nigeria-could-become-africas-sport-and-entertainment-hub-for-major-competitions-productions-and-talent-development-says-former-fifa-secretary-general-fatma-samoura",
+      "source": "https://acgafrica.com/nigeria-could-become-africas-sport-and-entertainment-hub-for-major-competitions-productions-and-talent-development-says-former-fifa-secretary-general-fatma-samoura/",
+      "file": "sources/articles/c5d8b00b24abd299.html",
+      "sha256": "789526a742177b41fdeb44218a2f65480c783ed9f3ba3ca0a01a4f349c2a521f",
+      "checkedTextWidgets": 9
+    },
+    {
+      "slug": "former-fifa-chief-member-associations-officer-kenny-jean-marie-joins-african-collaborations-group-acg-advisory-board-to-advance-sport-and-entertainment-districts-across-africa",
+      "source": "https://acgafrica.com/former-fifa-chief-member-associations-officer-kenny-jean-marie-joins-african-collaborations-group-acg-advisory-board-to-advance-sport-and-entertainment-districts-across-africa/",
+      "file": "sources/articles/e1db49a4547a2716.html",
+      "sha256": "ed05f401d19cefc753f9b8932d6f1e777c3f4055ec711313c933e7908feba044",
+      "checkedTextWidgets": 9
+    },
+    {
+      "slug": "rugby-africa-president-herbert-mensah-joins-african-collaborations-group-acg-advisory-board-to-advance-sport-and-entertainment-districts-across-africa",
+      "source": "https://acgafrica.com/rugby-africa-president-herbert-mensah-joins-african-collaborations-group-acg-advisory-board-to-advance-sport-and-entertainment-districts-across-africa/",
+      "file": "sources/articles/a08e273774bb7fc8.html",
+      "sha256": "fbb4bf2347e5306de99e4e51211e79d5c8bd999fd9b386573fd6a44b70a5d228",
+      "checkedTextWidgets": 9
+    },
+    {
+      "slug": "former-fifa-secretary-general-fatma-samoura-joins-african-collaborations-group-acg-advisory-board-to-advance-sport-and-entertainment-districts-across-africa",
+      "source": "https://acgafrica.com/former-fifa-secretary-general-fatma-samoura-joins-african-collaborations-group-acg-advisory-board-to-advance-sport-and-entertainment-districts-across-africa/",
+      "file": "sources/articles/fc26a6a560042bef.html",
+      "sha256": "a9b0cd515ba91951a6ca6a9cb8379c470e4a8acd965cbf88981731f3fe4218ac",
+      "checkedTextWidgets": 9
+    },
+    {
+      "slug": "chief-executive-officer-infrastructure-origination-and-collaboration-platform-africa",
+      "source": "https://acgafrica.com/chief-executive-officer-infrastructure-origination-and-collaboration-platform-africa/",
+      "file": "sources/articles/c1f69de648f9fa54.html",
+      "sha256": "f9f4e857eb3f7f57d50c1fde71824b1b16b8d9935c987321a4f3634b9c1d7cc0",
+      "checkedTextWidgets": 9
+    },
+    {
+      "slug": "job-offer-founding-chief-executive-officer-ceo-sport-entertainment-infrastructure-origination-in-africa",
+      "source": "https://acgafrica.com/job-offer-founding-chief-executive-officer-ceo-sport-entertainment-infrastructure-origination-in-africa/",
+      "file": "sources/articles/40d445fb5ced0dcd.html",
+      "sha256": "74a9ee23b7f2eac2707bf833bd7a5998bda11ac195a6cbaffa155be4057bd7ff",
+      "checkedTextWidgets": 9
+    }
+  ],
+  "profiles": 12,
+  "failures": [],
+  "formHandling": "Official field labels, required states and country options retained locally; user selected an email draft to info@acgafrica.com. CAPTCHA not required for email handoff.",
+  "responsiveContent": "Both published Private sector descriptions retained; desktop and compact wording follows official visibility."
+}

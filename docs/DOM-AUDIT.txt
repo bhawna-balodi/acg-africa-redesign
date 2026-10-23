@@ -1,0 +1,51 @@
+DOM semantics and accessibility audit - 21 October 2026
+
+Scope and verified issues
+- Audited generated HTML for all 37 routes and the shared build/templates/styles.
+  Existing main/header/footer, list structures, heading levels, responsive grids,
+  contact renderer and shared layout were already sound and retained.
+- Fixed four duplicate heading IDs. IDs had been assigned before paragraph
+  promotion and again after it; IDs are now assigned only after final headings.
+- Named 72 related-story thumbnail links using their existing title headings.
+  Removed 19 invisible empty source anchors from the keyboard sequence, retaining
+  their whitespace contents. No visible text or meaningful destination removed.
+- Used native navigation for the team index and article paging; used native
+  article content associated with its published H1. Existing portrait and story
+  image frames now use figure. Generic named challenge containers are groups.
+- The skip-link main target now has tabindex=-1 for explicit keyboard focus.
+
+DOM reduction and maintainability
+- Removed two redundant portrait-source wrappers and the anonymous mission CTA
+  wrapper. Kept source carriers, content groups and grid wrappers whose removal
+  would affect spacing, selector relationships or layout. No blanket div stripping.
+- Total generated body elements: 6057 to 6035. Div elements: 1459 to 1423. Native element substitutions account for the remaining
+  div reduction. The largest layout depth is retained where structurally needed.
+- src/templates/semantics.mjs applies the shared build-time corrections. No new
+  client-side script, React migration, package or runtime dependency introduced.
+  Header/footer/navigation and the contact form remain shared template functions.
+- Scoped existing header nav selectors to nav:where(#navigation), retaining their
+  specificity and appearance while preventing them from styling new native navs.
+
+Verification
+- 111 full-page screenshots (37 routes at 1440/768/390px) are byte-identical before
+  and after. Motion was frozen using the reduced-motion preference only during
+  screenshot capture, not disabled in production. No visual regression detected.
+- Static checks cover unique IDs, complete ARIA relationships, heading order,
+  named controls/links, native landmarks and absence of nested interactive controls.
+  List children and heading content models also checked without violations.
+- Browser accessibility-tree and keyboard checks pass on seven representative
+  routes at desktop/mobile widths: meaningful link names, native article/nav/group
+  roles, skip-to-main focus, and tabbing into the content after the skip link.
+- Existing homepage/menu/sequence keyboard, no-JS, reduced-motion, form validation,
+  clipboard fallback, process progress and biography disclosure checks pass.
+- Source content/branding/image bytes, routes, CTA ownership and email-draft
+  tests pass. No source JS interaction logic or visual style values changed.
+- Manual assistive-technology and non-Chrome testing remain unperformed.
+
+Evidence and recovery
+- scripts/verify-dom.mjs, scripts/browser-dom-visual-qa.mjs and
+  scripts/browser-dom-accessibility-qa.mjs retain the checks.
+- .qa/dom-audit-before.json, .qa/dom-audit-after.json, .qa/dom-visual-results.json
+  and .qa/dom-accessibility-results.json hold detailed local evidence.
+- Pre-change files retained in .undo/dom-semantics/. QA and undo data are ignored
+  by the repository. No publication or external message was performed.

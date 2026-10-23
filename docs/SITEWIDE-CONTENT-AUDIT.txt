@@ -1,0 +1,139 @@
+Brand placement, compact navigation and official-content restoration - 21 October 2026
+- Refreshed all 25 official HTML sources (homepage, six main pages and 18 full
+  articles). Reimported exact wording; 12 profile biographies remain linked to
+  their official Our Team popup sources. Independent widget-coverage audit now
+  runs during verification, rather than checking only previously selected IDs.
+- Restored the current footer wording, including long-term employment, and the
+  exact LinkedIn label. Restored the compact Private sector description using
+  the original desktop/compact visibility distinction, without rewriting either.
+- Restored every article's published Go Back, Share:, More Posts and previous/next
+  content. Related posts use original thumbnails, titles and local destinations.
+  Original decorative share icons remain decorative; no fake share actions added.
+- Branded photo sources retain their original bytes. CSS frames the unmarked
+  photograph area and displays the original transparent ACG symbol separately.
+  Only four named corner anchors are allowed. Placement is explicit per use:
+  hero detail/top-right, challenge/top-right, mission/bottom-left, method/top-left,
+  model invitation/bottom-right, ecosystem/top-right, contact/bottom-right; page
+  covers use top-right, bottom-left and top-left respectively. Small invitation
+  marks sit clear of glass copy panels. No new bitmap assets or packages.
+- Closed navbar height is 70% of the prior measured logo-plus-padding height.
+  Desktop 110.75px becomes 77.52px; responsive values follow the same formula.
+  Text remains 16px; links remain 48px and menu/contact controls at least 44px.
+  Footer logo remains at its existing size. Scrolling does not change dimensions.
+- Content evidence: docs/OFFICIAL-CONTENT-AUDIT.json records source hashes and
+  complete widget coverage. Source fragments now total 25 homepage plus 377
+  additional fragments. Current official contact-form handling is retained as
+  explicitly requested earlier; published introductions are preserved locally.
+- Aftermark used as quality control: stable frames, intentional placement,
+  consistent controls, meaningful source copy, restrained effects and functional
+  navigation. Current design direction and natural scrolling retained.
+- Previous source and snapshots: .undo/brand-content-refinement/.
+
+Sitewide content and component audit — 21 October 2026
+
+Before implementation
+Homepage: ambition -> need -> infrastructure failure -> mission. Preserve this
+four-section story. The challenge's explanatory statement is incorrectly a large
+accordion control; it should read as the introduction to the existing sequence.
+Mission principles and closing action must stay together as a section conclusion.
+
+Who We Are: provenance, delivery capacity, backing and method establish credibility;
+the small category labels currently compete with the actual messages. Each statement
+and its supporting evidence belong together. Explore Victory District and See what
+we do are contextual links after their complete explanations. Introductory links
+are page-level routes; distinguish their secondary role from the final contact action.
+What ACG is / is not is a comparison, not a repeated stack of independent paragraphs.
+
+What We Do: five gates explain commitment and accountability, followed by six work
+steps explaining execution. Show these as two related but distinct process patterns.
+The model CTA belongs after the complete venue-to-ecosystem explanation.
+
+Victory District: problem -> operating requirements -> repeatability -> local
+adaptation -> three reinforcing verticals -> outcomes -> stakeholder value.
+Requirements are operating conditions, verticals are a model, and beneficiaries
+are a value mapping. They should not all become interchangeable feature cards.
+The contact action concludes the stakeholder section after every beneficiary.
+
+Our Team: institutional purpose -> two leadership biographies -> independent board
+-> academic panel. Names, roles and biographies need distinct type roles. Long
+supporting career history can use explicit native disclosure; primary identity and
+experience must remain visible. Portrait/name/role are one person, not separate
+widgets. Profile links need consistent visible feedback. Section anchors must remain.
+
+Profiles: individual identity -> role -> evidence/biography -> original reference
+links. Original reference links belong after the associated biography, while the
+board-return link is navigation rather than a primary conversion action.
+
+News: dates -> headlines -> story. The latest item can lead the archive; article
+pages require a narrow reading measure, a clear lead and semantic subheadings.
+Back-to-news links are tertiary navigation. Original story/source links remain
+within their narrative context; do not convert every link into a button.
+
+Contact: original invitation and email precede one clear official-form action.
+Keep the previously selected external form flow and state the destination honestly.
+
+Shared corrections
+- One type-role system across every route, with explicit display, page, section,
+  item, lead, body and metadata roles; no label promoted above its main message.
+- One container/grid, an 8px spacing rhythm, 8px image frames and shared controls.
+- Filled actions indicate the final conversion. Secondary routes use outlines;
+  contextual references use text links. Place actions after their owned content.
+- Eliminate source-format empty paragraphs, trailing line-break gaps and accidental
+  presentation markup while preserving every original word and punctuation mark.
+- Use open lists, process rails, comparisons, directories and reading layouts
+  according to content purpose. Avoid adding decorative icons or motion.
+
+Aftermark validation scope
+Check typography rhythm, brand palette, spacing, grids, shape consistency, content
+integrity, meaningful CTA destinations, responsiveness, keyboard controls and
+reduced motion. Treat the document as quality control, not visual direction.
+
+Implemented system
+- src/templates/presentation.mjs assigns context roles and action ownership in
+  one build step shared by all 37 routes. Original imported content stays intact.
+- src/styles/content-system.css defines the common reading, hierarchy, component
+  and content-pattern rules; existing working navigation and homepage identity stay.
+- Main hierarchy: hero display; page title; section title; supporting claim/item;
+  20-24px lead; 18px body; 16px controls/metadata; 14px uppercase section label.
+- One 1312px container, existing responsive column logic, 8px spacing increments,
+  8px image frames and 16px control radius. Outer navigation retains its shell.
+- Filled conversion actions, outlined onward routes and underlined contextual
+  references have distinct roles. All original CTA wording and destinations remain.
+  Every styled action resolves to its owning ancestor; docs/CTA-OWNERSHIP.json
+  records the complete inventory and is regenerated by content verification.
+- Intro actions follow the complete intro; evidence links conclude their full
+  evidence block; the model action concludes its explanation; stakeholder contact
+  follows all five beneficiaries; contact invitations contain one primary action.
+- Homepage challenge is visible explanatory content rather than an accordion.
+  Existing manual four-point sequence, keyboard controls and reduced motion stay.
+- Biographies keep identity and principal experience visible. Native Read more
+  contains only supplementary history and works without JavaScript.
+- Academic/board purpose and remit are grouped; original member order and all
+  linked profiles remain. Directory jump links reuse existing navigation labels.
+- News leads with the latest item and retains original chronological order. Article
+  leads, original quotations, reading subheadings and media references have distinct
+  treatments. Original quotes are formatted as quotes without changing wording.
+- Empty source-format paragraphs and trailing breaks no longer create arbitrary
+  gaps. Copy checks exclude only whitespace and interface labels, preserving every
+  original letter, punctuation mark and source-block association.
+
+Verification evidence
+- 25 homepage and 268 additional source fragments: PASS.
+- 37 local routes, 103 original image files, all internal links/anchors: PASS.
+- Context-specific assertions cover 5 gates, 6 work steps, 5 operating requirements,
+  3 model verticals, 5 beneficiary rows and all 40 board/research members.
+- All 37 routes at 1440, 768 and 390px: no overflow, failed images or runtime errors.
+- Additional 320/1024px checks for every page family: readable body copy, visible
+  action touch targets >=44px, shared typeface and no overflow: PASS.
+- Native biography keyboard activation, both histories expanded and no-JS access:
+  PASS. Homepage menu, sequence and reduced-motion regression: PASS at five widths.
+- Desktop and mobile visual inspection performed. Mission-label contrast and
+  competing action variants were corrected during review.
+- Final profile/article review corrected inline reference spacing, headline width
+  and oversized inline logo presentation. All original meaningful link labels and
+  destinations are now compared with the imported pages, alongside source copy.
+- Final results: 111 full-page viewport checks, 18 additional context checks,
+  63 actions with explicit ownership/hierarchy, and zero runtime exceptions.
+- Manual screen-reader and non-Chrome testing remain unperformed. Work is local;
+  official form processing remains on ACG's website per the user's earlier choice.
+- Before-change snapshot: .undo/sitewide-context/.

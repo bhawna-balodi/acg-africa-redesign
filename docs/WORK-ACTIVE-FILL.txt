@@ -1,0 +1,29 @@
+What We Do active row feedback — 22 October 2026
+
+Root cause: nearest-row-top selection used a page-relative42% reading line
+without clipping to the desktop list viewport or floating header. It could
+switch early to the next point and consider clipped/unseen rows. The gradient
+background also faded across the row instead of supplying a consistent fill.
+
+Fix: intersect list bounds with the visible viewport below the header; clamp
+the existing reading line into that intersection; select the visible row that
+contains it, with half-open boundaries to avoid premature next-row switching.
+Hidden/clipped rows are excluded. The final-scroll completion state only
+selects point6 when that row is also visible. A ResizeObserver refreshes the
+selection when responsive sizing or font wrapping changes the list viewport.
+Existing passive/rAF-coalesced scroll updates and progress attributes remain.
+
+The active row now has a uniform3.5%-opacity brand-green background. Inactive
+rows remain transparent. Every separator, including the active one, retains
+the requested light10%-opacity green. Reduced motion removes fill transitions.
+No content, DOM, image, height, spacing, scrolling or type changes.
+
+Validation: all static/content/semantic/even-pixel checks pass. Focused browser
+tests at1440/1024/768/390px place the reading line near the lower edge of each
+of six rows and verify the correct row remains active, exactly one current
+row, uniform fill, no gradient and identical light separator colours. Reduced
+motion has zero transition duration. General storytelling tests verify all six
+progress states, article progress, reduced transparency/motion and no-JS.
+Existing nine-width four-point/native-keyboard viewport tests passed.
+Reports: .qa/work-active-results.json and .qa/storytelling-results.json.
+Backup: .undo/work-active-fill/.

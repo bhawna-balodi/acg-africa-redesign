@@ -1,0 +1,436 @@
+Contact section height refinement - 21 October 2026
+- Increased the Contact Us desktop section height by 20% (under one pixel of
+  rounding versus the measured previous section). Regular/short desktop density
+  modes retained, with larger field heights, padding, message area and gaps.
+- Adjacent image is 20% taller, remains top-aligned in the existing column, and
+  uses object-fit:cover to preserve the underlying photograph's proportions.
+- This CSS-only change is scoped to Contact Us at desktop widths. Tablet/mobile
+  section and image measurements are identical before/after; other forms retain
+  their current layout. Full body DOM fingerprint is identical before/after.
+- Verified at 1440/1366/1280/1024/768/390/320px: no horizontal overflow. Regular
+  desktop section is 806.39px (was 671.39); short desktop is 734.39px (was 611.39).
+- All content/DOM/ARIA/source/link/email tests pass. Three form pages pass layout,
+  validation, copy fallback and no-JavaScript checks at five widths. Desktop
+  screenshot reviewed. New height intentionally supersedes the earlier tight
+  single-viewport sizing contract. No clipping or nested scroll area introduced.
+- Evidence: .qa/contact-height-before.json and .qa/contact-height-after.json.
+  Previous stylesheet: .undo/contact-height-20/contact.css.
+
+DOM semantics and accessibility audit - 21 October 2026
+
+Scope and verified issues
+- Audited generated HTML for all 37 routes and the shared build/templates/styles.
+  Existing main/header/footer, list structures, heading levels, responsive grids,
+  contact renderer and shared layout were already sound and retained.
+- Fixed four duplicate heading IDs. IDs had been assigned before paragraph
+  promotion and again after it; IDs are now assigned only after final headings.
+- Named 72 related-story thumbnail links using their existing title headings.
+  Removed 19 invisible empty source anchors from the keyboard sequence, retaining
+  their whitespace contents. No visible text or meaningful destination removed.
+- Used native navigation for the team index and article paging; used native
+  article content associated with its published H1. Existing portrait and story
+  image frames now use figure. Generic named challenge containers are groups.
+- The skip-link main target now has tabindex=-1 for explicit keyboard focus.
+
+DOM reduction and maintainability
+- Removed two redundant portrait-source wrappers and the anonymous mission CTA
+  wrapper. Kept source carriers, content groups and grid wrappers whose removal
+  would affect spacing, selector relationships or layout. No blanket div stripping.
+- Total generated body elements: 6057 to 6035. Div elements: 1459 to 1423. Native element substitutions account for the remaining
+  div reduction. The largest layout depth is retained where structurally needed.
+- src/templates/semantics.mjs applies the shared build-time corrections. No new
+  client-side script, React migration, package or runtime dependency introduced.
+  Header/footer/navigation and the contact form remain shared template functions.
+- Scoped existing header nav selectors to nav:where(#navigation), retaining their
+  specificity and appearance while preventing them from styling new native navs.
+
+Verification
+- 111 full-page screenshots (37 routes at 1440/768/390px) are byte-identical before
+  and after. Motion was frozen using the reduced-motion preference only during
+  screenshot capture, not disabled in production. No visual regression detected.
+- Static checks cover unique IDs, complete ARIA relationships, heading order,
+  named controls/links, native landmarks and absence of nested interactive controls.
+  List children and heading content models also checked without violations.
+- Browser accessibility-tree and keyboard checks pass on seven representative
+  routes at desktop/mobile widths: meaningful link names, native article/nav/group
+  roles, skip-to-main focus, and tabbing into the content after the skip link.
+- Existing homepage/menu/sequence keyboard, no-JS, reduced-motion, form validation,
+  clipboard fallback, process progress and biography disclosure checks pass.
+- Source content/branding/image bytes, routes, CTA ownership and email-draft
+  tests pass. No source JS interaction logic or visual style values changed.
+- Manual assistive-technology and non-Chrome testing remain unperformed.
+
+Evidence and recovery
+- scripts/verify-dom.mjs, scripts/browser-dom-visual-qa.mjs and
+  scripts/browser-dom-accessibility-qa.mjs retain the checks.
+- .qa/dom-audit-before.json, .qa/dom-audit-after.json, .qa/dom-visual-results.json
+  and .qa/dom-accessibility-results.json hold detailed local evidence.
+- Pre-change files retained in .undo/dom-semantics/. QA and undo data are ignored
+  by the repository. No publication or external message was performed.
+
+Earlier audit records:
+
+Contact sizing and navbar refinement - 21 October 2026
+- Increased the current navbar height by 15% using its existing responsive
+  calculation; retained full logo, 16px navigation and touch-target sizing.
+- Desktop form padding, gaps and field heights now respond to viewport height.
+  Body/labels remain at least 16px and controls at least 44px. An empty live
+  status region no longer reserves unused vertical space; errors, manual
+  textarea resizing and submission feedback can still expand naturally.
+- Contact page starts below the actual navbar with a deliberate 16/24px gap.
+  Removed the legacy forced section padding rather than clipping the form,
+  limiting its height, scaling it down or adding an internal scroller.
+- Slightly widened the desktop image column and applied an 8:5 image frame,
+  preserving object-fit and alignment. Mobile/tablet composition retained.
+- Entire initial form is visible at 1920x1080, 1440x900, 1366x768, 1280x720,
+  1024x768 and 1001x768. At 1366x768 its bottom is 692.53px; at 1440x900
+  its bottom is 760.53px. No fields, labels, country choices or notes removed.
+- Nine viewport checks pass navbar sizing, alignment, overflow, aspect ratio
+  and touch targets. Desktop laptop screenshot visually reviewed. Three form
+  pages pass layout/validation/copy/fallback checks at five widths. Homepage
+  menu, keyboard, sequence, reduced-motion and no-JS regression pass.
+- Content, routes, assets, CTA ownership and email-draft checks pass.
+- Results: .qa/contact-sizing-results.json and .qa/contact-results.json.
+  Before-change styles: .undo/contact-sizing/.
+
+Themed contact form - 21 October 2026
+
+User-selected delivery
+- Prepare an email to info@acgafrica.com. This supersedes the previous choice
+  to redirect to the official form. No backend, CAPTCHA simulation or fake
+  delivery confirmation is used. Submit opens the user email editor; sending
+  the draft is a separate user action. Input values are never reset.
+
+Source and placement
+- Original Get in Touch heading, description, email, six required field labels,
+  all country-code options, South Africa default, required legend and Submit
+  label are extracted from sources/contact-us.html. No new business fields.
+- One reusable component appears on Contact Us and the existing closing contact
+  sections on Who We Are and Our Team. Homepage/nav CTAs lead to local contact.
+- Shared type, spacing, colors, borders and CTA styles; desktop editorial split
+  and a stacked mobile form. Existing images remain in stable inline frames.
+
+Behavior and accessibility
+- Native required/email validation and text whitespace validation; visible labels,
+  autocomplete, phone input mode, inline errors and an announced status region.
+- Copy enquiry prepares the same content. If clipboard access fails, a focused
+  selectable text area provides a manual fallback. This does not send anything.
+- No-JavaScript mode retains the native mailto form and validation; JS-only Copy
+  control remains hidden. No entered details are saved in browser storage.
+
+Implementation
+- src/templates/contact-form.mjs: shared themed form rendering.
+- src/content/contact-form.json: extracted official schema.
+- scripts/import-pages.mjs: reproducible extraction and three placements.
+- src/styles/contact.css: scoped responsive contact layout.
+- src/scripts/contact.js: validation, draft encoding, clipboard/manual fallback.
+
+Verification
+- All source wording, routes, assets and CTA ownership pass sitewide verification.
+- Exact labels/options/default/required states, safe draft encoding and actual
+  Submit handler tested with an isolated email editor: correct recipient, all
+  details retained, incomplete enquiries blocked. No actual email was sent.
+- Three pages pass layout/controls at 1440/1024/768/390/320px (15 checks).
+- Browser tests pass empty/invalid email validation, successful copy, rejected
+  clipboard fallback, keyboard focus and no-JavaScript behavior. No JS errors.
+- Three changed pages pass scroll/image checks at four widths (12 checks): no
+  root overflow, sticky content, frame overflow, broken images or image drift.
+- Desktop/mobile contact screenshots visually reviewed. The OS email-client
+  setup and actual email delivery are outside this local preview verification.
+- Aftermark reviewed for truthful interactions, accessible controls, consistent
+  typography, deliberate grouping, stable imagery and restrained motion.
+- Before-change snapshot: .undo/contact-form/.
+
+Earlier audit records:
+
+Final verification for brand/content pass
+- Independent official-content coverage: 25 live-source pages plus 12 profiles,
+  with no missing published text widgets; navigation labels and footer also checked.
+- Restored compact Home navigation and active state as on the official portal.
+- Corner/header checks pass at 1440/1024/1001/768/390/320px. All four anchors used.
+- All 37 routes pass at 1440/768/390/320px: 148 checks, no overflow, nested content
+  scrollers, sticky content, frame overflow, broken images, scroll-induced image
+  movement, recorded initial layout shifts or runtime errors.
+- Original content, asset bytes, 1537 links/assets, route and CTA checks pass.
+- Homepage controls, mobile menu, keyboard, reduced-motion and no-JS checks pass;
+  six work-step states, article reading progress and transparency preferences pass.
+- Representative desktop/mobile screenshots reviewed for homepage, Who We Are,
+  What We Do, Victory District and a complete article with restored related posts.
+
+Brand placement, compact navigation and official-content restoration - 21 October 2026
+- Refreshed all 25 official HTML sources (homepage, six main pages and 18 full
+  articles). Reimported exact wording; 12 profile biographies remain linked to
+  their official Our Team popup sources. Independent widget-coverage audit now
+  runs during verification, rather than checking only previously selected IDs.
+- Restored the current footer wording, including long-term employment, and the
+  exact LinkedIn label. Restored the compact Private sector description using
+  the original desktop/compact visibility distinction, without rewriting either.
+- Restored every article's published Go Back, Share:, More Posts and previous/next
+  content. Related posts use original thumbnails, titles and local destinations.
+  Original decorative share icons remain decorative; no fake share actions added.
+- Branded photo sources retain their original bytes. CSS frames the unmarked
+  photograph area and displays the original transparent ACG symbol separately.
+  Only four named corner anchors are allowed. Placement is explicit per use:
+  hero detail/top-right, challenge/top-right, mission/bottom-left, method/top-left,
+  model invitation/bottom-right, ecosystem/top-right, contact/bottom-right; page
+  covers use top-right, bottom-left and top-left respectively. Small invitation
+  marks sit clear of glass copy panels. No new bitmap assets or packages.
+- Closed navbar height is 70% of the prior measured logo-plus-padding height.
+  Desktop 110.75px becomes 77.52px; responsive values follow the same formula.
+  Text remains 16px; links remain 48px and menu/contact controls at least 44px.
+  Footer logo remains at its existing size. Scrolling does not change dimensions.
+- Content evidence: docs/OFFICIAL-CONTENT-AUDIT.json records source hashes and
+  complete widget coverage. Source fragments now total 25 homepage plus 377
+  additional fragments. Current official contact-form handling is retained as
+  explicitly requested earlier; published introductions are preserved locally.
+- Aftermark used as quality control: stable frames, intentional placement,
+  consistent controls, meaningful source copy, restrained effects and functional
+  navigation. Current design direction and natural scrolling retained.
+- Previous source and snapshots: .undo/brand-content-refinement/.
+
+Scroll and image stability audit ? 21 October 2026
+- Final browser sweep: all 37 routes at 1440, 768, 390 and 320px (148 checks),
+  with no content scrollers, sticky content, root overflow, image/frame overflow,
+  image geometry changes on scrolling, recorded load-time layout shifts or
+  runtime exceptions. Results: .qa/scroll-stability-results.json.
+- Removed the scroll-driven image transform and its observers/attributes, image
+  hover zoom, picture mask reveals, challenge crop panning, content-image sticky
+  positioning and the sticky team index. Header no longer translates on scroll.
+- Challenge uses a stable grid-based manual sequence instead of an overflow/snap
+  track. Largest item determines height; inactive items are inert. Button and
+  keyboard navigation retained. Source content remains available without JS.
+- Initialized the JS navigation state before styles render, preventing the mobile
+  fallback navigation from briefly appearing and pushing page content down.
+- Existing image frames/dimensions, cover/contain rules, original assets and UI
+  retained. No global overflow suppression or forced page-height workaround.
+- Desktop and mobile challenge screenshots reviewed: stable framing and controls.
+- Native document wheel scrolling over challenge, four stable states and fixed
+  image crop pass at 1440/768/390/320. Full content/route/link verification passes.
+- Homepage menu/keyboard/no-JS/reduced-motion and sitewide process/progress/
+  preference checks pass. Browser audit scripts and detailed results in .qa/.
+- Aftermark checklist rechecked for unpredictable movement, clipping, sticky drift,
+  accessible interactions and responsive behavior.
+- Undo snapshot: .undo/scroll-stability/.
+
+﻿ACG homepage — layout refinement and systems audit
+
+Latest logo visibility correction — 21 October 2026
+- Used ACG's original dark-lettering Group-148335.png from the official What We Do
+  page on the light header/footer. Retained the original inverse version for dark
+  surfaces; no logo reconstruction, recoloring or image modification.
+- Removed the small navy badge and internal padding. Header image width is 192px
+  on wide desktops, 156px on compact desktops, and 176/156px on mobile. Footer uses
+  a larger 240/224px image constrained to its grid column.
+- Original content/asset/link checks and homepage responsive/navigation regression
+  pass. Specific 1440/1001/701/390/320px checks show no logo/navigation/footer overlap.
+- Desktop/mobile header screenshots inspected. Importer retains both official
+  variants for reproducible builds. Previous settings: .undo/logo-visibility/.
+
+Earlier sitewide visual storytelling pass — 21 October 2026
+- Existing copy, source relationships, branding, order, links and assets retained.
+- Original utilisation ranges, consortium disciplines, APO backing facts, five gates
+  and three model verticals now have appropriate code-native visual explanations.
+- Consecutive section compositions vary by purpose: image-led evidence, network,
+  proof, comparison, process, ecosystem, directory and reading layouts.
+- Original imagery supports more sections. Selected glass overlays preserve dark
+  text contrast on near-opaque paper and supply opacity/contrast preference fallbacks.
+- Sitewide motion uses selective entrances, connection/range reveals, restrained
+  linked-image hover, six-step reading emphasis and article-position indication.
+- No hidden baseline copy, scroll hijacking, automatic sequence changes, perpetual
+  effects, new dependencies, stock imagery or unsupported data.
+- Source/static checks and all 37 routes at desktop/tablet/mobile pass. Existing
+  interactions, narrow-screen reading/touch checks and native keyboard behavior pass.
+- Six step states, reading progress, reduced motion, transparency and no-JS fallbacks
+  tested. Mobile gate layout corrected. Original image bytes remain unchanged.
+- Detailed audit: docs/VISUAL-STORYTELLING.txt. Results: .qa/storytelling-results.json.
+- Local only. Manual screen-reader and non-Chrome checks remain unperformed.
+- Prior version: .undo/visual-storytelling/.
+
+Earlier sitewide content and hierarchy refinement — 21 October 2026
+- Audited context, message/support/evidence relationships and CTA ownership before
+  editing: docs/SITEWIDE-CONTENT-AUDIT.txt. Reviewed Aftermark for quality control.
+- Shared presentation rules now cover all 37 routes. Source data remains unchanged.
+- Introductions, evidence, comparisons, gates, work sequence, district requirements,
+  verticals, stakeholder benefits, directories and articles use purposeful patterns.
+- Section actions conclude their content; conversion, onward-route and contextual
+  actions have clear and consistent hierarchy. CTA ownership is statically verified.
+- Labels support primary claims. Shared type roles govern headings, statements,
+  leads, body, names, roles, dates and references; source-format blank gaps removed.
+- Long biographies use native disclosure only for supplementary career history.
+  Challenge statement is visible and noninteractive; manual sequence retained.
+- All original source fragments and image bytes verified. All 37 routes tested at
+  three widths; additional 320/1024px context and touch checks, keyboard biography
+  operation, no-JS access and homepage interaction/reduced-motion checks passed.
+- Native controls and existing hover/focus states remain restrained. Desktop/mobile
+  screenshots reviewed; contrast and action-variant defects found during QA fixed.
+- Local only. Screen-reader and non-Chrome testing remain unperformed.
+- Full audit and evidence: docs/SITEWIDE-CONTENT-AUDIT.txt; .qa/context-results.json;
+  .qa/pages-results.json; .qa/results.json. Rollback: .undo/sitewide-context/.
+
+Earlier full-site expansion — 21 October 2026
+- Preserved the current homepage presentation and exact original homepage text.
+- Added six main pages from fresh official HTML snapshots, 18 full news articles,
+  and 12 local profile pages replacing the team's original linked popup content.
+- Included both leadership biographies, 28 board members and 12 research panel
+  members. Preserved the original team anchor destinations.
+- Original article body copy, images, links and downloads retained. News cards
+  link to local articles; navigation, home CTAs and cross-page links stay local.
+- Contact is a local page with original introduction and email. Official forms
+  deliberately remain external, following the user's previous selection; no
+  unconnected form or simulated success state is presented.
+- Shared Manrope, brand palette, container, spacing tokens and image framing.
+  Existing homepage interactions, reduced-motion and no-JS behavior retained.
+- Re-read Aftermark checklist. No fabricated claims, decorative icon systems,
+  extra dependencies or unrelated animation added.
+- Verification: 37 routes, 268 new source fragments plus 25 homepage fragments,
+  103 original images, 1135 link/asset references. Original wording checked
+  directly against saved official HTML for imported content widgets.
+- Chrome: all 37 routes returned HTTP 200 at 1440, 768 and 390px; no horizontal
+  overflow, broken images or runtime exceptions. Representative desktop/mobile
+  screenshots inspected. Homepage interaction regression passed at five widths.
+- Remaining limits: official form processing is hosted by ACG; third-party links
+  remain external. Non-Chrome and manual screen-reader testing not performed.
+- Local preview only. No publication performed. Snapshot: .undo/full-site/.
+
+Earlier section-variety refinement
+- Hero: removed the disclosure entirely. All three original principles appear
+  in an integrated editorial band below the headline and photograph.
+- Why: offset label/statement across the shared grid, two readable prose columns,
+  a closing statement and a smaller right-side photograph on desktop.
+- Challenge: retained its accessible guided sequence, original copy and controls.
+- Mission: panoramic image, four aligned open principles and an anchored closing
+  statement/CTA replace the circular photo and repeated split composition.
+- All photographic frames use the same 8px radius, including mobile. Existing
+  interactive controls keep their consistent rounded treatment.
+- No additional copy, colors, icons, animations or dependencies introduced.
+- Original-content verification passed: 25 exact fragments against the official
+  snapshot, original footer, section order and 10 unchanged image files.
+- Chrome QA passed at 1440, 1024, 768, 390 and 320px: no overflow or broken images.
+  Menu, keyboard focus, all four sequence positions, challenge disclosure,
+  reduced motion and no-JavaScript fallback passed without runtime errors.
+- Desktop and mobile screenshots reviewed. Aftermark quality checklist re-read:
+  consistent grid and spacing, readable hierarchy, restrained effects, functional
+  controls and original copy retained. No publication performed.
+- Non-Chrome and manual screen-reader checks remain unperformed.
+- Previous version saved in .undo/section-variety/.
+
+Previous typography and original-content refinement
+- Retained Manrope, the current layout, brand colors, imagery and interactions.
+- Shared responsive type tokens govern display, section, item, closing, body,
+  UI and label sizes. Hero emphasis uses weight 800, primary statements 700
+  and repeated mission/challenge items 600.
+- Primary statement line height is 1.12; body copy is 18px with comfortable
+  leading; navigation and footer prose are 16px.
+- Compared all 25 rendered fragments directly with the freshly fetched official
+  homepage (sources/home-live.html), preserving punctuation and words.
+  Original wording already matched; collapsed supporting text caused apparent
+  omissions. Both supporting disclosures now open by default.
+- Removed the added footer email and replaced the invented challenge disclosure
+  label with its original introductory statement. Original footer copy verified.
+- Exact-text verification passed: 25 fragments, 10 unchanged images, four original
+  sections and 34 link/asset references.
+- Chrome passed at 1440, 1024, 768, 390 and 320px: no overflow, broken images or
+  runtime errors. Navigation, challenge controls, keyboard behavior, disclosures,
+  reduced motion and no-JavaScript fallback passed.
+- Desktop and mobile screenshots reviewed. Re-read the uploaded Aftermark AI
+  report to check type roles, spacing, branding, content and interactions.
+- No new decoration or motion. Local only; non-Chrome and screen-reader testing
+  remain unperformed. Rollback snapshot: .undo/content-and-weight/.
+
+Earlier layout audit
+Scope
+This is a compositional refinement of the approved Future of Sport direction.
+Manrope typography, ACG colors, imagery, rounded photographic treatment, light hero,
+minimal controls and the green Mission chapter are retained. No stylistic reset.
+All 25 original source fragments, four-section order, ten image assets, navigation,
+contact destinations and existing interactive behaviors remain intact.
+
+Shared layout system
+- One 1312px maximum container throughout the homepage, header and footer.
+- Desktop: 12 equal columns, 32px gutters, with repeatable 5/7 and 7/5 compositions.
+- Tablet: same grid logic, 24px gutters. Mobile: one aligned column.
+- Section padding: 96px desktop, 80px tablet, 64px mobile.
+- Heading-to-content groups: 48px desktop, 40px tablet, 32px mobile.
+- Labels to headings: 24px. Related prose: 24px. CTA spacing: 24–32px.
+- Reading-width caps are deliberate; arbitrary percentage offsets are removed.
+
+Section refinements
+Hero
+- Headline, supporting line, CTA and secondary disclosure share one 7-column group.
+- Stadium photograph anchors the adjacent 5-column zone at a controlled height.
+- The secondary strip is integrated into the main content rather than spanning a
+  disconnected row. Its original supporting image is available inside the disclosure.
+Why This Matters
+- One clear statement introduces a 5-column photo / 7-column reading composition.
+- Both explanatory passages and the closing statement form one contiguous group.
+- Removed the 8% image offset, alternating text edges and large empty internal gaps.
+Challenge
+- Intro and disclosure lead directly into the sequence with one standard group gap.
+- The familiar failure label, number, description and controls share the same edge.
+- Photo and sequence have defined proportions; controls stay anchored below the text.
+Mission
+- Heading, photo, principles and closing CTA use the shared grid and spacing.
+- Removed alternating principle indents and unnecessary sticky positioning.
+- A structured, consistently aligned list replaces the staggered manifesto.
+- The closing statement and CTA are anchored by one shared rule and smaller gap.
+Footer
+- Logo, copy and links now use the same 12-column container and gutter system.
+
+Verification
+- Static build/content verification: PASS (25 fragments, 10 unchanged image files,
+  original section relationships, official contact target and 35 link/assets).
+- Chrome: 1440x1000, 1024x900, 768x1024, 390x844 and 320x740: PASS.
+- No horizontal overflow, broken images or JavaScript runtime errors.
+- Desktop and mobile full-page screenshots visually inspected.
+- Menu/submenu dismissal and keyboard focus restoration: PASS.
+- Sequence buttons, all four positions, Home/End/Left/Right and endpoint states: PASS.
+- Disclosures, reduced motion and no-JavaScript content/navigation: PASS.
+- Additional measured grid audit at all five widths: matching container edges and
+  widths; aligned image columns, reading columns, mission principles and sequence
+  controls; integrated hero support; equal section padding; no expanded-content overflow.
+- Results: .qa/results.json and .qa/grid-results.json. Screenshots: .qa/viewport-*.png.
+
+Final visual quality audit
+One clear entry label, a dominant message, grouped supporting material and a
+consistent exit gap are present in each section. The existing typography and color
+hierarchy remain. No decorative effects, cards, icons, new claims or animations
+were added. Existing Aftermark safeguards and reduced-motion behavior remain.
+
+Limits
+Manual screen-reader testing and non-Chrome browser testing remain unperformed.
+Original image resolution and external destination uptime remain outside this pass.
+Existing preview noindex/canonical metadata retained. Changes are local, unpublished.
+
+Preview: http://127.0.0.1:4173/
+Run: node scripts/serve.mjs
+Build: node scripts/import-content.mjs then node scripts/build.mjs
+Verify: node scripts/verify.mjs
+Previous version: .undo/layout-refinement/
+
+22 October 2026 � Challenge conclusions: CSS-only distinction of the two concluding original list items. Outcomes has a gold rule and larger copy; The consequence has a warm neutral frame and a separately emphasized original Victory District statement. The first three risks remain an open list. Two conclusion columns above 1100px, stacked below. No DOM, wording, reading order or controls changed. Static source/semantic checks and homepage browser checks passed at 1440/1024/768/390/320px, including sequence controls, reduced motion and no-JS. Desktop screenshot reviewed.
+
+22 October 2026 � Challenge sequence photography: each of the four existing failure rows now maps to a different approved local ACG stadium photograph. Existing single image/frame, brand mark, text and controls retained. Image and descriptive alt update with the selected point; no autoplay, zoom, parallax or layout changes. Remaining images preloaded only near the section. Static content/semantic verification passed; browser test asserts four distinct successfully decoded sources and matching alt text alongside the existing sequence interaction checks.
+
+22 October 2026 � Sitewide Manrope typography: audited 37 routes at four widths before and after. Centralized role tokens and final CSS layer, preserving exact body DOM on every route. Final display/page/section/subsection desktop caps 80/60/44/28px; body18px, lead20px, supporting14�16px, navigation14px, buttons/forms16px. Contextual story/card/data variants documented in docs/TYPOGRAPHY-AUDIT.txt. No layout, image, wording, component, handler, colour or font-asset changes. 148 typography/viewport checks and 111 full-page checks passed with no overflow or broken imagery. Reviewed desktop home, corporate, contact and mobile biography screenshots.
+
+22 October 2026 � Homepage-derived typography normalization (supersedes reverted smaller-scale pass). Original hero curves/weights retained: 1440px prefix72 and accent115.2?116, section54.72?56. Existing roles snapped to 4px and applied sitewide through centralized CSS tokens; genuine story/card/diagram/UI roles retained. Exact body DOM identical on all 37 routes, content and runtime JS unchanged. See docs/TYPOGRAPHY-NORMALIZATION.txt for baseline values and validation. All route typography/overflow tests and contact form checks passed; original desktop homepage visual impact reviewed.
+
+
+Body text follow-up: standard paragraph/prose and equivalent body lists now18px via shared token. Other typography roles retained. Static checks pass; 37-route computed typography/overflow audit rerun at1440/768/390/320px, with 18px accepted as the explicitly requested exception.
+
+Even authored pixel sizing: normalized source CSS visual lengths to even integers while preserving breakpoint logic, ratios, responsive calculations, opacity and motion offsets, per confirmed scope. See docs/EVEN-PIXEL-AUDIT.txt. Source guard integrated into verify. All37 routes pass computed type/DOM/overflow audit at four widths; homepage interactions, contact forms at five widths and navbar/contact sizing at nine viewports pass. Mobile contact screenshot reviewed.
+
+Platform and outline icons: What ACG is now has a connected five-gate diagram, grouped responsibilities and separate contrast band. Shared local two-stroke outline vocabulary is selectively reused across relevant site sections/contact/source links. No DOM/source-copy/runtime-JS changes. Existing content, typography and CTA ownership retained. Full 37-route DOM/type/overflow audit and focused five-viewport diagram/icon-consistency checks pass. See docs/PLATFORM-ICONOGRAPHY.txt.
+
+Icon boxes: subtle green surfaces and main-green outline glyphs applied consistently to the shared icon system.40px feature boxes /24px inline boxes,8px radius. Connector/list alignment updated; original DOM and text retained. Stage sequence checks pass at1440/1024/768/390/320px; desktop visual reviewed.
+
+
+
+Familiar failure proportional refinement: responsive count token reduced by shared16px token (112?96px desktop,80?64px on smaller widths). Count-to-copy gap tightened24?16px; stable track minimums reduced24px at each breakpoint, desktop controls remain aligned to the image bottom. No retained empty number slot. Existing DOM/source/controls preserved. Before/after four-viewport measurements verify exact16px reduction on all four numbers and unchanged image frame; desktop/mobile screenshots reviewed. Static checks and homepage keyboard/slider/reduced-motion/no-JS tests pass.
+
+
+
+
+Work four-point viewport: desktop image height now matches the measured end ofpoint4. Existing ordered list clips after four complete points and uses a native focusable vertical scrollbar to revealpoints5�6, per explicit request. Tablet/mobile/no-JS retain natural complete reading flow. DOM/source text unchanged; ResizeObserver/font-ready measurement preserves alignment. Native keyboard End, all six progress states, nine-width containment and37-route DOM/type checks pass. See docs/WORK-FOUR-VISIBLE.txt.
+
+Work active fill corrected: selection uses the visible clipped list below the navbar and the point containing the reading line, preventing premature next-point highlights. Final state requires the last point to be visible. Active fill is uniformly subtle brand green, with the same light separators on every row. Six-point lower-edge/one-current/fill/contrast checks pass at four widths; static and reduced-motion tests pass. See docs/WORK-ACTIVE-FILL.txt.

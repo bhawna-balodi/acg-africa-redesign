@@ -1,0 +1,458 @@
+[
+  {
+    "page": "/",
+    "text": "Contact Us",
+    "href": "/contact-us/",
+    "role": "primary",
+    "owner": "navigation"
+  },
+  {
+    "page": "/",
+    "text": "Contact Us ↗",
+    "href": "/contact-us/",
+    "role": "primary",
+    "owner": "home-section-1"
+  },
+  {
+    "page": "/",
+    "text": "Contact us to learn more",
+    "href": "/contact-us/",
+    "role": "primary",
+    "owner": "home-mission"
+  },
+  {
+    "page": "who-we-are",
+    "text": "Contact Us",
+    "href": "/contact-us/",
+    "role": "primary",
+    "owner": "navigation"
+  },
+  {
+    "page": "who-we-are",
+    "text": "Victory District™",
+    "href": "/victory-district/",
+    "role": "secondary",
+    "owner": "who-we-are-section-1"
+  },
+  {
+    "page": "who-we-are",
+    "text": "What we do",
+    "href": "/what-we-do/",
+    "role": "secondary",
+    "owner": "who-we-are-section-1"
+  },
+  {
+    "page": "who-we-are",
+    "text": "Explore Victory District™ →",
+    "href": "/victory-district/",
+    "role": "text",
+    "owner": "who-we-are-evidence-1"
+  },
+  {
+    "page": "who-we-are",
+    "text": "See what we do →",
+    "href": "/what-we-do/",
+    "role": "text",
+    "owner": "who-we-are-evidence-4"
+  },
+  {
+    "page": "who-we-are",
+    "text": "See what we do →",
+    "href": "/what-we-do/",
+    "role": "text",
+    "owner": "platform-comparison-1"
+  },
+  {
+    "page": "who-we-are",
+    "text": "Learn more about our team →",
+    "href": "/our-team/",
+    "role": "text",
+    "owner": "platform-comparison-1"
+  },
+  {
+    "page": "who-we-are",
+    "text": "Explore Victory District™ →",
+    "href": "/victory-district/",
+    "role": "text",
+    "owner": "platform-comparison-2"
+  },
+  {
+    "page": "who-we-are",
+    "text": "Submit ↗",
+    "role": "primary",
+    "owner": "who-we-are-section-4"
+  },
+  {
+    "page": "who-we-are",
+    "text": "Copy enquiry",
+    "role": "secondary",
+    "owner": "who-we-are-section-4"
+  },
+  {
+    "page": "what-we-do",
+    "text": "Contact Us",
+    "href": "/contact-us/",
+    "role": "primary",
+    "owner": "navigation"
+  },
+  {
+    "page": "what-we-do",
+    "text": "Explore the model",
+    "href": "/victory-district/",
+    "role": "secondary",
+    "owner": "what-we-do-section-4"
+  },
+  {
+    "page": "victory-district",
+    "text": "Contact Us",
+    "href": "/contact-us/",
+    "role": "primary",
+    "owner": "navigation"
+  },
+  {
+    "page": "victory-district",
+    "text": "Contact us to learn more",
+    "href": "/contact-us/",
+    "role": "primary",
+    "owner": "victory-district-section-5"
+  },
+  {
+    "page": "our-team/fatma-samoura",
+    "text": "Contact Us",
+    "href": "/contact-us/",
+    "role": "primary",
+    "owner": "navigation"
+  },
+  {
+    "page": "our-team/fatma-samoura",
+    "text": "Read More",
+    "href": "/former-fifa-secretary-general-fatma-samoura-joins-african-collaborations-group-acg-advisory-board-to-advance-sport-and-entertainment-districts-across-africa/",
+    "role": "text",
+    "owner": "our-team-fatma-samoura-section-2"
+  },
+  {
+    "page": "our-team/abi-ijasanmi",
+    "text": "Contact Us",
+    "href": "/contact-us/",
+    "role": "primary",
+    "owner": "navigation"
+  },
+  {
+    "page": "our-team/abi-ijasanmi",
+    "text": "Read More",
+    "href": "/former-caf-chief-operating-officer-and-founder-of-african-sports-investor-asi-abiola-ijasanmi-joins-african-collaborations-group-acg-advisory-board-to-advance-sport-and-entertainment-districts-acr/",
+    "role": "text",
+    "owner": "our-team-abi-ijasanmi-section-2"
+  },
+  {
+    "page": "our-team/carlos-carrion",
+    "text": "Contact Us",
+    "href": "/contact-us/",
+    "role": "primary",
+    "owner": "navigation"
+  },
+  {
+    "page": "our-team/carlos-carrion",
+    "text": "Read More",
+    "href": "/santiago-bernabeu-stadium-renovation-advisor-carlos-carrion-joins-african-collaborations-group-acg-advisory-board-to-advance-sport-and-entertainment-districts-across-africa/",
+    "role": "text",
+    "owner": "our-team-carlos-carrion-section-2"
+  },
+  {
+    "page": "our-team/chantele-carrington",
+    "text": "Contact Us",
+    "href": "/contact-us/",
+    "role": "primary",
+    "owner": "navigation"
+  },
+  {
+    "page": "our-team/chantele-carrington",
+    "text": "Read More",
+    "href": "/invest-africa-ceo-uk-government-africa-investor-group-member-and-former-pwc-uk-africa-leader-chantele-carrington-joins-african-collaborations-group-acg-advisory-board-to-advance-sport-and-entertai/",
+    "role": "text",
+    "owner": "our-team-chantele-carrington-section-2"
+  },
+  {
+    "page": "our-team/paulo-gomes",
+    "text": "Contact Us",
+    "href": "/contact-us/",
+    "role": "primary",
+    "owner": "navigation"
+  },
+  {
+    "page": "our-team/paulo-gomes",
+    "text": "Read More",
+    "href": "/paulo-gomes-former-world-bank-executive-director-for-africa-and-afrochampions-co-chair-joins-african-collaborations-group-acg-advisory-board-to-advance-sport-and-entertainment-districts-across-afri/",
+    "role": "text",
+    "owner": "our-team-paulo-gomes-section-2"
+  },
+  {
+    "page": "our-team/aicha-diop",
+    "text": "Contact Us",
+    "href": "/contact-us/",
+    "role": "primary",
+    "owner": "navigation"
+  },
+  {
+    "page": "our-team/aicha-diop",
+    "text": "Read More",
+    "href": "/former-nba-africa-and-basketball-africa-league-executive-aicha-diop-joins-african-collaborations-group-acg-advisory-board-to-advance-sport-and-entertainment-districts-across-africa/",
+    "role": "text",
+    "owner": "our-team-aicha-diop-section-2"
+  },
+  {
+    "page": "our-team/herbert-mensah",
+    "text": "Contact Us",
+    "href": "/contact-us/",
+    "role": "primary",
+    "owner": "navigation"
+  },
+  {
+    "page": "our-team/herbert-mensah",
+    "text": "Read More",
+    "href": "/rugby-africa-president-herbert-mensah-joins-african-collaborations-group-acg-advisory-board-to-advance-sport-and-entertainment-districts-across-africa/",
+    "role": "text",
+    "owner": "our-team-herbert-mensah-section-2"
+  },
+  {
+    "page": "our-team/nj-ayuk",
+    "text": "Contact Us",
+    "href": "/contact-us/",
+    "role": "primary",
+    "owner": "navigation"
+  },
+  {
+    "page": "our-team/nj-ayuk",
+    "text": "Read more",
+    "href": "/african-energy-chamber-aec-executive-chairman-nj-ayuk-joins-african-collaborations-group-acg-advisory-board-to-advance-sport-and-entertainment-districts-across-africa/",
+    "role": "text",
+    "owner": "our-team-nj-ayuk-section-2"
+  },
+  {
+    "page": "our-team/clare-barrell",
+    "text": "Contact Us",
+    "href": "/contact-us/",
+    "role": "primary",
+    "owner": "navigation"
+  },
+  {
+    "page": "our-team/clare-barrell",
+    "text": "Read More",
+    "href": "/world-rugby-director-of-international-relations-and-member-services-clare-barrell-joins-african-collaborations-group-acg-advisory-board-to-advance-sport-and-entertainment-districts-across-africa/",
+    "role": "text",
+    "owner": "our-team-clare-barrell-section-2"
+  },
+  {
+    "page": "our-team/kenny-jean-marie",
+    "text": "Contact Us",
+    "href": "/contact-us/",
+    "role": "primary",
+    "owner": "navigation"
+  },
+  {
+    "page": "our-team/kenny-jean-marie",
+    "text": "Read More",
+    "href": "/former-fifa-chief-member-associations-officer-kenny-jean-marie-joins-african-collaborations-group-acg-advisory-board-to-advance-sport-and-entertainment-districts-across-africa/",
+    "role": "text",
+    "owner": "our-team-kenny-jean-marie-section-2"
+  },
+  {
+    "page": "our-team/jan-alessie",
+    "text": "Contact Us",
+    "href": "/contact-us/",
+    "role": "primary",
+    "owner": "navigation"
+  },
+  {
+    "page": "our-team/jan-alessie",
+    "text": "Read More",
+    "href": "/world-football-summit-wfs-co-founder-and-managing-director-jan-alessie-joins-african-collaborations-group-acg-advisory-board-to-advance-sport-and-entertainment-districts-across-africa/",
+    "role": "text",
+    "owner": "our-team-jan-alessie-section-2"
+  },
+  {
+    "page": "our-team/jonathan-worsley",
+    "text": "Contact Us",
+    "href": "/contact-us/",
+    "role": "primary",
+    "owner": "navigation"
+  },
+  {
+    "page": "our-team/jonathan-worsley",
+    "text": "Read More",
+    "href": "/the-bench-chairman-and-future-hospitality-summit-fhs-founder-jonathan-worsley-joins-african-collaborations-group-acg-advisory-board-to-advance-sport-and-entertainment-districts-across-africa/",
+    "role": "text",
+    "owner": "our-team-jonathan-worsley-section-2"
+  },
+  {
+    "page": "our-team",
+    "text": "Contact Us",
+    "href": "/contact-us/",
+    "role": "primary",
+    "owner": "navigation"
+  },
+  {
+    "page": "our-team",
+    "text": "Submit ↗",
+    "role": "primary",
+    "owner": "our-team-section-6"
+  },
+  {
+    "page": "our-team",
+    "text": "Copy enquiry",
+    "role": "secondary",
+    "owner": "our-team-section-6"
+  },
+  {
+    "page": "acg-news",
+    "text": "Contact Us",
+    "href": "/contact-us/",
+    "role": "primary",
+    "owner": "navigation"
+  },
+  {
+    "page": "contact-us",
+    "text": "Contact Us",
+    "href": "/contact-us/",
+    "role": "primary",
+    "owner": "navigation"
+  },
+  {
+    "page": "contact-us",
+    "text": "Submit ↗",
+    "role": "primary",
+    "owner": "contact-us-section-1"
+  },
+  {
+    "page": "contact-us",
+    "text": "Copy enquiry",
+    "role": "secondary",
+    "owner": "contact-us-section-1"
+  },
+  {
+    "page": "former-damac-senior-vice-president-paulo-j-cruz-appointed-founding-ceo-of-african-collaboration-group-acg-to-spearhead-sports-and-entertainment-district-development-across-africa",
+    "text": "Contact Us",
+    "href": "/contact-us/",
+    "role": "primary",
+    "owner": "navigation"
+  },
+  {
+    "page": "african-energy-chamber-aec-executive-chairman-nj-ayuk-joins-african-collaborations-group-acg-advisory-board-to-advance-sport-and-entertainment-districts-across-africa",
+    "text": "Contact Us",
+    "href": "/contact-us/",
+    "role": "primary",
+    "owner": "navigation"
+  },
+  {
+    "page": "the-bench-chairman-and-future-hospitality-summit-fhs-founder-jonathan-worsley-joins-african-collaborations-group-acg-advisory-board-to-advance-sport-and-entertainment-districts-across-africa",
+    "text": "Contact Us",
+    "href": "/contact-us/",
+    "role": "primary",
+    "owner": "navigation"
+  },
+  {
+    "page": "acg-ceo-paulo-j-cruz-to-speak-at-the-angola-access-investment-conference-2026-in-luanda-on-how-sport-and-entertainment-districts-can-drive-inclusive-economic-growth-across-africa",
+    "text": "Contact Us",
+    "href": "/contact-us/",
+    "role": "primary",
+    "owner": "navigation"
+  },
+  {
+    "page": "invest-africa-ceo-uk-government-africa-investor-group-member-and-former-pwc-uk-africa-leader-chantele-carrington-joins-african-collaborations-group-acg-advisory-board-to-advance-sport-and-entertai",
+    "text": "Contact Us",
+    "href": "/contact-us/",
+    "role": "primary",
+    "owner": "navigation"
+  },
+  {
+    "page": "former-caf-chief-operating-officer-and-founder-of-african-sports-investor-asi-abiola-ijasanmi-joins-african-collaborations-group-acg-advisory-board-to-advance-sport-and-entertainment-districts-acr",
+    "text": "Contact Us",
+    "href": "/contact-us/",
+    "role": "primary",
+    "owner": "navigation"
+  },
+  {
+    "page": "santiago-bernabeu-stadium-renovation-advisor-carlos-carrion-joins-african-collaborations-group-acg-advisory-board-to-advance-sport-and-entertainment-districts-across-africa",
+    "text": "Contact Us",
+    "href": "/contact-us/",
+    "role": "primary",
+    "owner": "navigation"
+  },
+  {
+    "page": "paulo-gomes-former-world-bank-executive-director-for-africa-and-afrochampions-co-chair-joins-african-collaborations-group-acg-advisory-board-to-advance-sport-and-entertainment-districts-across-afri",
+    "text": "Contact Us",
+    "href": "/contact-us/",
+    "role": "primary",
+    "owner": "navigation"
+  },
+  {
+    "page": "world-football-summit-wfs-co-founder-and-managing-director-jan-alessie-joins-african-collaborations-group-acg-advisory-board-to-advance-sport-and-entertainment-districts-across-africa",
+    "text": "Contact Us",
+    "href": "/contact-us/",
+    "role": "primary",
+    "owner": "navigation"
+  },
+  {
+    "page": "sport-infrastructure-in-africa-bbc-world-news-interviews-acg-founder-nicolas-pompigne-mognard-on-the-transformation-ahead",
+    "text": "Contact Us",
+    "href": "/contact-us/",
+    "role": "primary",
+    "owner": "navigation"
+  },
+  {
+    "page": "world-rugby-director-of-international-relations-and-member-services-clare-barrell-joins-african-collaborations-group-acg-advisory-board-to-advance-sport-and-entertainment-districts-across-africa",
+    "text": "Contact Us",
+    "href": "/contact-us/",
+    "role": "primary",
+    "owner": "navigation"
+  },
+  {
+    "page": "former-nba-africa-and-basketball-africa-league-executive-aicha-diop-joins-african-collaborations-group-acg-advisory-board-to-advance-sport-and-entertainment-districts-across-africa",
+    "text": "Contact Us",
+    "href": "/contact-us/",
+    "role": "primary",
+    "owner": "navigation"
+  },
+  {
+    "page": "nigeria-could-become-africas-sport-and-entertainment-hub-for-major-competitions-productions-and-talent-development-says-former-fifa-secretary-general-fatma-samoura",
+    "text": "Contact Us",
+    "href": "/contact-us/",
+    "role": "primary",
+    "owner": "navigation"
+  },
+  {
+    "page": "former-fifa-chief-member-associations-officer-kenny-jean-marie-joins-african-collaborations-group-acg-advisory-board-to-advance-sport-and-entertainment-districts-across-africa",
+    "text": "Contact Us",
+    "href": "/contact-us/",
+    "role": "primary",
+    "owner": "navigation"
+  },
+  {
+    "page": "rugby-africa-president-herbert-mensah-joins-african-collaborations-group-acg-advisory-board-to-advance-sport-and-entertainment-districts-across-africa",
+    "text": "Contact Us",
+    "href": "/contact-us/",
+    "role": "primary",
+    "owner": "navigation"
+  },
+  {
+    "page": "former-fifa-secretary-general-fatma-samoura-joins-african-collaborations-group-acg-advisory-board-to-advance-sport-and-entertainment-districts-across-africa",
+    "text": "Contact Us",
+    "href": "/contact-us/",
+    "role": "primary",
+    "owner": "navigation"
+  },
+  {
+    "page": "chief-executive-officer-infrastructure-origination-and-collaboration-platform-africa",
+    "text": "Contact Us",
+    "href": "/contact-us/",
+    "role": "primary",
+    "owner": "navigation"
+  },
+  {
+    "page": "job-offer-founding-chief-executive-officer-ceo-sport-entertainment-infrastructure-origination-in-africa",
+    "text": "Contact Us",
+    "href": "/contact-us/",
+    "role": "primary",
+    "owner": "navigation"
+  }
+]

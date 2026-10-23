@@ -1,0 +1,58 @@
+Homepage-derived typography consistency — 22 October 2026
+
+Baseline
+Computed typography audited on all 37 existing routes at 1440, 768, 390 and
+320px before editing. DOM, source semantics, component boundaries and all four
+existing CSS layers reviewed. The Aftermark document's type/rhythm/legibility
+checks were reviewed without adopting another visual direction.
+
+The homepage is the reference, not the reverted smaller typography redesign.
+At 1440px, measured → normalized:
+Hero prefix 72 → 72px, 700, 1.08, -.045em.
+Hero accent 115.2 → 116px, 800, 1.05, -.045em.
+Hero tail 24 → 24px, 400, 1.5, normal tracking.
+Section statement 54.72 → 56px, 700, 1.13, -.035em.
+Subsection/featured explanatory text 30 → 32px, 600, 1.3, -.02em.
+Mission principles 28 → 28px, 600, 1.3, -.02em.
+Mission conclusion 48 → 48px, 700, 1.15, -.03em.
+Body and standard bullets 18 → 20px, 400, 1.65, normal tracking.
+Eyebrow 14 → 16px, 600, 1.5, .08em.
+Navigation 16px/500 and buttons/forms 16px remain unchanged in size.
+Supporting/footer text uses the existing 16px supporting role.
+
+Nearest multiples of 4px are used; exact half-way values round upward to retain
+emphasis/readability. Fluid curves and existing breakpoint logic are retained
+using CSS round(nearest, clamp(...), 4px). A fluid value can round downward by
+less than 2px at an intermediate viewport; no smaller display scale is imposed.
+For example, 768px hero accent 61.44 → 60px follows the explicit nearest rule.
+At 390px it is 54.6 → 56px, and at 320px it remains 48px.
+
+Architecture and roles
+src/styles/typography.css owns the final semantic role tokens/mappings. It is
+concatenated into the existing banners.css build output: no added DOM node or
+stylesheet request, no font installation, and no runtime JavaScript changes.
+Role selectors use existing classes and context, rather than assigning one
+universal style to a heading tag. Page titles retain the existing 88px cap;
+long editorial titles retain their existing 52px cap. Compact directory names,
+news cards, related stories, infographic numbers and UI labels remain distinct.
+Main section statements share the homepage section token across page families.
+Lead paragraphs, normal paragraphs and ordinary prose bullets share role rules;
+structured processes, captions and conclusions keep their different purposes.
+Typography weights, leading, tracking, 24px text rhythm and 720px reading width
+are centralized. Existing source content, colour, imagery and layouts are kept.
+
+Verification
+Exact body HTML comparison on all 37 routes: unchanged.
+Computed browser audit: 148 route/viewport combinations, sole Manrope family,
+all sampled text sizes exact multiples of 4px, readable form controls and no
+horizontal overflow. Reports .qa/typography-before.json and typography-after.json.
+Homepage hero/section sizes are also compared to the original nearest-4px
+values and weights to prevent accidental loss of the reference hierarchy.
+Full-page browser checks: 37 routes at 1440/768/390px, no broken images or
+overflow. Source coverage, semantic checks and email-draft static tests pass.
+Desktop homepage screenshot reviewed against the starting composition.
+
+Additional responsive validation: the collaboration diagram retains its original 16px mobile caption role, preventing min-content overflow at 320px; body paragraphs remain 20px. Narrow-screen utilisation figures normalize the original 30px to 32px. Overflow assertions use the document client width, including desktop scrollbar space. The computed audit also covers inline spans, emphasis, all links, captions and disclosure labels. Contact forms pass all five tested widths, including 320px.
+
+
+Latest body sizing: user requested 18px standard paragraphs instead of20px. The shared --type-body token is now18px, including equivalent ordinary lists and prose. This explicit body-size exception supersedes the earlier 4px-only rule for this role. Heading, display, lead, caption, CTA and control scales remain unchanged. Exact DOM/content comparison and responsive type audit rerun across all37 routes.
